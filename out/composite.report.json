@@ -1,0 +1,6175 @@
+{
+ "fps": 30,
+ "duration": 6.0,
+ "policy": "nearest",
+ "offsets": {
+  "camA": 0.0,
+  "camB": 0.35,
+  "camC": -0.8,
+  "camD": 1.2
+ },
+ "frames": [
+  {
+   "k": 0,
+   "T": 0.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 0,
+     "pts_time": 0.0,
+     "arr_seq": 0,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 9728,
+     "pts_time": 0.791667,
+     "arr_seq": 19,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 1,
+   "T": 0.033333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 512,
+     "pts_time": 0.033333,
+     "arr_seq": 1,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 10240,
+     "pts_time": 0.833333,
+     "arr_seq": 20,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 2,
+   "T": 0.066667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 1024,
+     "pts_time": 0.066667,
+     "arr_seq": 2,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 10752,
+     "pts_time": 0.875,
+     "arr_seq": 21,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 3,
+   "T": 0.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 1536,
+     "pts_time": 0.1,
+     "arr_seq": 3,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 11264,
+     "pts_time": 0.916667,
+     "arr_seq": 22,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 4,
+   "T": 0.133333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 2048,
+     "pts_time": 0.133333,
+     "arr_seq": 4,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 11264,
+     "pts_time": 0.916667,
+     "arr_seq": 22,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 5,
+   "T": 0.166667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 2560,
+     "pts_time": 0.166667,
+     "arr_seq": 5,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 11776,
+     "pts_time": 0.958333,
+     "arr_seq": 23,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 6,
+   "T": 0.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 3072,
+     "pts_time": 0.2,
+     "arr_seq": 6,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 12288,
+     "pts_time": 1.0,
+     "arr_seq": 24,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 7,
+   "T": 0.233333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 3584,
+     "pts_time": 0.233333,
+     "arr_seq": 7,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 12800,
+     "pts_time": 1.041667,
+     "arr_seq": 25,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 8,
+   "T": 0.266667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 4096,
+     "pts_time": 0.266667,
+     "arr_seq": 8,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 13312,
+     "pts_time": 1.083333,
+     "arr_seq": 26,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 9,
+   "T": 0.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 4608,
+     "pts_time": 0.3,
+     "arr_seq": 9,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 13312,
+     "pts_time": 1.083333,
+     "arr_seq": 26,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 10,
+   "T": 0.333333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 5120,
+     "pts_time": 0.333333,
+     "arr_seq": 10,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 13824,
+     "pts_time": 1.125,
+     "arr_seq": 27,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 11,
+   "T": 0.366667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 5632,
+     "pts_time": 0.366667,
+     "arr_seq": 11,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 0,
+     "pts_time": 0.0,
+     "arr_seq": 0,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 14336,
+     "pts_time": 1.166667,
+     "arr_seq": 28,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 12,
+   "T": 0.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 6144,
+     "pts_time": 0.4,
+     "arr_seq": 12,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 512,
+     "pts_time": 0.04,
+     "arr_seq": 1,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 14848,
+     "pts_time": 1.208333,
+     "arr_seq": 29,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 13,
+   "T": 0.433333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 6656,
+     "pts_time": 0.433333,
+     "arr_seq": 13,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 1024,
+     "pts_time": 0.08,
+     "arr_seq": 2,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 15360,
+     "pts_time": 1.25,
+     "arr_seq": 30,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 14,
+   "T": 0.466667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 7168,
+     "pts_time": 0.466667,
+     "arr_seq": 14,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 1536,
+     "pts_time": 0.12,
+     "arr_seq": 3,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 15360,
+     "pts_time": 1.25,
+     "arr_seq": 30,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 15,
+   "T": 0.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 7680,
+     "pts_time": 0.5,
+     "arr_seq": 15,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 2048,
+     "pts_time": 0.16,
+     "arr_seq": 4,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 15872,
+     "pts_time": 1.291667,
+     "arr_seq": 31,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 16,
+   "T": 0.533333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 8192,
+     "pts_time": 0.533333,
+     "arr_seq": 16,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 2560,
+     "pts_time": 0.2,
+     "arr_seq": 5,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 16384,
+     "pts_time": 1.333333,
+     "arr_seq": 32,
+     "err_ms": -0.0
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 17,
+   "T": 0.566667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 8704,
+     "pts_time": 0.566667,
+     "arr_seq": 17,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 2560,
+     "pts_time": 0.2,
+     "arr_seq": 5,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 16896,
+     "pts_time": 1.375,
+     "arr_seq": 33,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 18,
+   "T": 0.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 9216,
+     "pts_time": 0.6,
+     "arr_seq": 18,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 3072,
+     "pts_time": 0.24,
+     "arr_seq": 6,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 17408,
+     "pts_time": 1.416667,
+     "arr_seq": 34,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 19,
+   "T": 0.633333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 9728,
+     "pts_time": 0.633333,
+     "arr_seq": 19,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 3584,
+     "pts_time": 0.28,
+     "arr_seq": 7,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 17408,
+     "pts_time": 1.416667,
+     "arr_seq": 34,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 20,
+   "T": 0.666667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 10240,
+     "pts_time": 0.666667,
+     "arr_seq": 20,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 4096,
+     "pts_time": 0.32,
+     "arr_seq": 8,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 17920,
+     "pts_time": 1.458333,
+     "arr_seq": 35,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 21,
+   "T": 0.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 10752,
+     "pts_time": 0.7,
+     "arr_seq": 21,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 4608,
+     "pts_time": 0.36,
+     "arr_seq": 9,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 18432,
+     "pts_time": 1.5,
+     "arr_seq": 36,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 22,
+   "T": 0.733333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 11264,
+     "pts_time": 0.733333,
+     "arr_seq": 22,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 5120,
+     "pts_time": 0.4,
+     "arr_seq": 10,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 18944,
+     "pts_time": 1.541667,
+     "arr_seq": 37,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 23,
+   "T": 0.766667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 11776,
+     "pts_time": 0.766667,
+     "arr_seq": 23,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 5120,
+     "pts_time": 0.4,
+     "arr_seq": 10,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 19456,
+     "pts_time": 1.583333,
+     "arr_seq": 38,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 24,
+   "T": 0.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 12288,
+     "pts_time": 0.8,
+     "arr_seq": 24,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 5632,
+     "pts_time": 0.44,
+     "arr_seq": 11,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 19456,
+     "pts_time": 1.583333,
+     "arr_seq": 38,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 25,
+   "T": 0.833333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 12800,
+     "pts_time": 0.833333,
+     "arr_seq": 25,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 6144,
+     "pts_time": 0.48,
+     "arr_seq": 12,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 19968,
+     "pts_time": 1.625,
+     "arr_seq": 39,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 26,
+   "T": 0.866667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 13312,
+     "pts_time": 0.866667,
+     "arr_seq": 26,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 6656,
+     "pts_time": 0.52,
+     "arr_seq": 13,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 20480,
+     "pts_time": 1.666667,
+     "arr_seq": 40,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 27,
+   "T": 0.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 13824,
+     "pts_time": 0.9,
+     "arr_seq": 27,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 7168,
+     "pts_time": 0.56,
+     "arr_seq": 14,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 20992,
+     "pts_time": 1.708333,
+     "arr_seq": 41,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 28,
+   "T": 0.933333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 14336,
+     "pts_time": 0.933333,
+     "arr_seq": 28,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 7680,
+     "pts_time": 0.6,
+     "arr_seq": 15,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 21504,
+     "pts_time": 1.75,
+     "arr_seq": 42,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 29,
+   "T": 0.966667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 14848,
+     "pts_time": 0.966667,
+     "arr_seq": 29,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 7680,
+     "pts_time": 0.6,
+     "arr_seq": 15,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 21504,
+     "pts_time": 1.75,
+     "arr_seq": 42,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 30,
+   "T": 1.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 15360,
+     "pts_time": 1.0,
+     "arr_seq": 30,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 8192,
+     "pts_time": 0.64,
+     "arr_seq": 16,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 22016,
+     "pts_time": 1.791667,
+     "arr_seq": 43,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 31,
+   "T": 1.033333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 15872,
+     "pts_time": 1.033333,
+     "arr_seq": 31,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 8704,
+     "pts_time": 0.68,
+     "arr_seq": 17,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 22528,
+     "pts_time": 1.833333,
+     "arr_seq": 44,
+     "err_ms": -0.0
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 32,
+   "T": 1.066667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 16384,
+     "pts_time": 1.066667,
+     "arr_seq": 32,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 9216,
+     "pts_time": 0.72,
+     "arr_seq": 18,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 23040,
+     "pts_time": 1.875,
+     "arr_seq": 45,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 33,
+   "T": 1.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 16896,
+     "pts_time": 1.1,
+     "arr_seq": 33,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 9728,
+     "pts_time": 0.76,
+     "arr_seq": 19,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 23552,
+     "pts_time": 1.916667,
+     "arr_seq": 46,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 34,
+   "T": 1.133333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 17408,
+     "pts_time": 1.133333,
+     "arr_seq": 34,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 10240,
+     "pts_time": 0.8,
+     "arr_seq": 20,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 23552,
+     "pts_time": 1.916667,
+     "arr_seq": 46,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 35,
+   "T": 1.166667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 17920,
+     "pts_time": 1.166667,
+     "arr_seq": 35,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 10240,
+     "pts_time": 0.8,
+     "arr_seq": 20,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 24064,
+     "pts_time": 1.958333,
+     "arr_seq": 47,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 36,
+   "T": 1.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 18432,
+     "pts_time": 1.2,
+     "arr_seq": 36,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 10752,
+     "pts_time": 0.84,
+     "arr_seq": 21,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 24576,
+     "pts_time": 2.0,
+     "arr_seq": 48,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 0,
+     "pts_time": 0.0,
+     "arr_seq": 0,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 37,
+   "T": 1.233333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 18944,
+     "pts_time": 1.233333,
+     "arr_seq": 37,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 11264,
+     "pts_time": 0.88,
+     "arr_seq": 22,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 25088,
+     "pts_time": 2.041667,
+     "arr_seq": 49,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 1024,
+     "pts_time": 0.066667,
+     "arr_seq": 1,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 38,
+   "T": 1.266667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 19456,
+     "pts_time": 1.266667,
+     "arr_seq": 38,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 11776,
+     "pts_time": 0.92,
+     "arr_seq": 23,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 25600,
+     "pts_time": 2.083333,
+     "arr_seq": 50,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 1024,
+     "pts_time": 0.066667,
+     "arr_seq": 1,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 39,
+   "T": 1.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 19968,
+     "pts_time": 1.3,
+     "arr_seq": 39,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 12288,
+     "pts_time": 0.96,
+     "arr_seq": 24,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 25600,
+     "pts_time": 2.083333,
+     "arr_seq": 50,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 2048,
+     "pts_time": 0.133333,
+     "arr_seq": 2,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 40,
+   "T": 1.333333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 20480,
+     "pts_time": 1.333333,
+     "arr_seq": 40,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 12800,
+     "pts_time": 1.0,
+     "arr_seq": 25,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 26112,
+     "pts_time": 2.125,
+     "arr_seq": 51,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 2048,
+     "pts_time": 0.133333,
+     "arr_seq": 2,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 41,
+   "T": 1.366667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 20992,
+     "pts_time": 1.366667,
+     "arr_seq": 41,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 12800,
+     "pts_time": 1.0,
+     "arr_seq": 25,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 26624,
+     "pts_time": 2.166667,
+     "arr_seq": 52,
+     "err_ms": -0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 3072,
+     "pts_time": 0.2,
+     "arr_seq": 3,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 42,
+   "T": 1.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 21504,
+     "pts_time": 1.4,
+     "arr_seq": 42,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 13312,
+     "pts_time": 1.04,
+     "arr_seq": 26,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 27136,
+     "pts_time": 2.208333,
+     "arr_seq": 53,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 3072,
+     "pts_time": 0.2,
+     "arr_seq": 3,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 43,
+   "T": 1.433333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 22016,
+     "pts_time": 1.433333,
+     "arr_seq": 43,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 13824,
+     "pts_time": 1.08,
+     "arr_seq": 27,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 27648,
+     "pts_time": 2.25,
+     "arr_seq": 54,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 4096,
+     "pts_time": 0.266667,
+     "arr_seq": 4,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 44,
+   "T": 1.466667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 22528,
+     "pts_time": 1.466667,
+     "arr_seq": 44,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 14336,
+     "pts_time": 1.12,
+     "arr_seq": 28,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 27648,
+     "pts_time": 2.25,
+     "arr_seq": 54,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 4096,
+     "pts_time": 0.266667,
+     "arr_seq": 4,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 45,
+   "T": 1.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 23040,
+     "pts_time": 1.5,
+     "arr_seq": 45,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 14848,
+     "pts_time": 1.16,
+     "arr_seq": 29,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 28160,
+     "pts_time": 2.291667,
+     "arr_seq": 55,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 5120,
+     "pts_time": 0.333333,
+     "arr_seq": 5,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 46,
+   "T": 1.533333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 23552,
+     "pts_time": 1.533333,
+     "arr_seq": 46,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 15360,
+     "pts_time": 1.2,
+     "arr_seq": 30,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 28672,
+     "pts_time": 2.333333,
+     "arr_seq": 56,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 5120,
+     "pts_time": 0.333333,
+     "arr_seq": 5,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 47,
+   "T": 1.566667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 24064,
+     "pts_time": 1.566667,
+     "arr_seq": 47,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 15360,
+     "pts_time": 1.2,
+     "arr_seq": 30,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 29184,
+     "pts_time": 2.375,
+     "arr_seq": 57,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 6144,
+     "pts_time": 0.4,
+     "arr_seq": 6,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 48,
+   "T": 1.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 24576,
+     "pts_time": 1.6,
+     "arr_seq": 48,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 15872,
+     "pts_time": 1.24,
+     "arr_seq": 31,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 29696,
+     "pts_time": 2.416667,
+     "arr_seq": 58,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 6144,
+     "pts_time": 0.4,
+     "arr_seq": 6,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 49,
+   "T": 1.633333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 25088,
+     "pts_time": 1.633333,
+     "arr_seq": 49,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 16384,
+     "pts_time": 1.28,
+     "arr_seq": 32,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 29696,
+     "pts_time": 2.416667,
+     "arr_seq": 58,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 6144,
+     "pts_time": 0.4,
+     "arr_seq": 6,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 50,
+   "T": 1.666667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 25600,
+     "pts_time": 1.666667,
+     "arr_seq": 50,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 16896,
+     "pts_time": 1.32,
+     "arr_seq": 33,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 30208,
+     "pts_time": 2.458333,
+     "arr_seq": 59,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 7168,
+     "pts_time": 0.466667,
+     "arr_seq": 7,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 51,
+   "T": 1.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 26112,
+     "pts_time": 1.7,
+     "arr_seq": 51,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 17408,
+     "pts_time": 1.36,
+     "arr_seq": 34,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 30720,
+     "pts_time": 2.5,
+     "arr_seq": 60,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 7168,
+     "pts_time": 0.466667,
+     "arr_seq": 7,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 52,
+   "T": 1.733333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 26624,
+     "pts_time": 1.733333,
+     "arr_seq": 52,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 17920,
+     "pts_time": 1.4,
+     "arr_seq": 35,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 31232,
+     "pts_time": 2.541667,
+     "arr_seq": 61,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 8192,
+     "pts_time": 0.533333,
+     "arr_seq": 8,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 53,
+   "T": 1.766667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 27136,
+     "pts_time": 1.766667,
+     "arr_seq": 53,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 17920,
+     "pts_time": 1.4,
+     "arr_seq": 35,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 31744,
+     "pts_time": 2.583333,
+     "arr_seq": 62,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 8192,
+     "pts_time": 0.533333,
+     "arr_seq": 8,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 54,
+   "T": 1.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 27648,
+     "pts_time": 1.8,
+     "arr_seq": 54,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 18432,
+     "pts_time": 1.44,
+     "arr_seq": 36,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 31744,
+     "pts_time": 2.583333,
+     "arr_seq": 62,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 9216,
+     "pts_time": 0.6,
+     "arr_seq": 9,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 55,
+   "T": 1.833333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 28160,
+     "pts_time": 1.833333,
+     "arr_seq": 55,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 18944,
+     "pts_time": 1.48,
+     "arr_seq": 37,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 32256,
+     "pts_time": 2.625,
+     "arr_seq": 63,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 9216,
+     "pts_time": 0.6,
+     "arr_seq": 9,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 56,
+   "T": 1.866667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 28672,
+     "pts_time": 1.866667,
+     "arr_seq": 56,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 19456,
+     "pts_time": 1.52,
+     "arr_seq": 38,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 32768,
+     "pts_time": 2.666667,
+     "arr_seq": 64,
+     "err_ms": -0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 10240,
+     "pts_time": 0.666667,
+     "arr_seq": 10,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 57,
+   "T": 1.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 29184,
+     "pts_time": 1.9,
+     "arr_seq": 57,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 19968,
+     "pts_time": 1.56,
+     "arr_seq": 39,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 33280,
+     "pts_time": 2.708333,
+     "arr_seq": 65,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 10240,
+     "pts_time": 0.666667,
+     "arr_seq": 10,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 58,
+   "T": 1.933333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 29696,
+     "pts_time": 1.933333,
+     "arr_seq": 58,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 20480,
+     "pts_time": 1.6,
+     "arr_seq": 40,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 33792,
+     "pts_time": 2.75,
+     "arr_seq": 66,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 11264,
+     "pts_time": 0.733333,
+     "arr_seq": 11,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 59,
+   "T": 1.966667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 30208,
+     "pts_time": 1.966667,
+     "arr_seq": 59,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 20480,
+     "pts_time": 1.6,
+     "arr_seq": 40,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 33792,
+     "pts_time": 2.75,
+     "arr_seq": 66,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 11264,
+     "pts_time": 0.733333,
+     "arr_seq": 11,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 60,
+   "T": 2.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 30720,
+     "pts_time": 2.0,
+     "arr_seq": 60,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 20992,
+     "pts_time": 1.64,
+     "arr_seq": 41,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 34304,
+     "pts_time": 2.791667,
+     "arr_seq": 67,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 12288,
+     "pts_time": 0.8,
+     "arr_seq": 12,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 61,
+   "T": 2.033333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 31232,
+     "pts_time": 2.033333,
+     "arr_seq": 61,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 21504,
+     "pts_time": 1.68,
+     "arr_seq": 42,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 34816,
+     "pts_time": 2.833333,
+     "arr_seq": 68,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 12288,
+     "pts_time": 0.8,
+     "arr_seq": 12,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 62,
+   "T": 2.066667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 31744,
+     "pts_time": 2.066667,
+     "arr_seq": 62,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 22016,
+     "pts_time": 1.72,
+     "arr_seq": 43,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 35328,
+     "pts_time": 2.875,
+     "arr_seq": 69,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 13312,
+     "pts_time": 0.866667,
+     "arr_seq": 13,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 63,
+   "T": 2.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 32256,
+     "pts_time": 2.1,
+     "arr_seq": 63,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 22528,
+     "pts_time": 1.76,
+     "arr_seq": 44,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 35840,
+     "pts_time": 2.916667,
+     "arr_seq": 70,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 14336,
+     "pts_time": 0.933333,
+     "arr_seq": 14,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 64,
+   "T": 2.133333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 32768,
+     "pts_time": 2.133333,
+     "arr_seq": 64,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 23040,
+     "pts_time": 1.8,
+     "arr_seq": 45,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 35840,
+     "pts_time": 2.916667,
+     "arr_seq": 70,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 14336,
+     "pts_time": 0.933333,
+     "arr_seq": 14,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 65,
+   "T": 2.166667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 33280,
+     "pts_time": 2.166667,
+     "arr_seq": 65,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 23040,
+     "pts_time": 1.8,
+     "arr_seq": 45,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 36352,
+     "pts_time": 2.958333,
+     "arr_seq": 71,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 14336,
+     "pts_time": 0.933333,
+     "arr_seq": 14,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 66,
+   "T": 2.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 33792,
+     "pts_time": 2.2,
+     "arr_seq": 66,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 23552,
+     "pts_time": 1.84,
+     "arr_seq": 46,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 36864,
+     "pts_time": 3.0,
+     "arr_seq": 72,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 15360,
+     "pts_time": 1.0,
+     "arr_seq": 15,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 67,
+   "T": 2.233333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 34304,
+     "pts_time": 2.233333,
+     "arr_seq": 67,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 24064,
+     "pts_time": 1.88,
+     "arr_seq": 47,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 37376,
+     "pts_time": 3.041667,
+     "arr_seq": 73,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 16384,
+     "pts_time": 1.066667,
+     "arr_seq": 16,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 68,
+   "T": 2.266667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 34816,
+     "pts_time": 2.266667,
+     "arr_seq": 68,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 24576,
+     "pts_time": 1.92,
+     "arr_seq": 48,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 37888,
+     "pts_time": 3.083333,
+     "arr_seq": 74,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 16384,
+     "pts_time": 1.066667,
+     "arr_seq": 16,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 69,
+   "T": 2.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 35328,
+     "pts_time": 2.3,
+     "arr_seq": 69,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 25088,
+     "pts_time": 1.96,
+     "arr_seq": 49,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 37888,
+     "pts_time": 3.083333,
+     "arr_seq": 74,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 16384,
+     "pts_time": 1.066667,
+     "arr_seq": 16,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 70,
+   "T": 2.333333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 35840,
+     "pts_time": 2.333333,
+     "arr_seq": 70,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 25600,
+     "pts_time": 2.0,
+     "arr_seq": 50,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 38400,
+     "pts_time": 3.125,
+     "arr_seq": 75,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 17408,
+     "pts_time": 1.133333,
+     "arr_seq": 17,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 71,
+   "T": 2.366667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 36352,
+     "pts_time": 2.366667,
+     "arr_seq": 71,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 25600,
+     "pts_time": 2.0,
+     "arr_seq": 50,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 38912,
+     "pts_time": 3.166667,
+     "arr_seq": 76,
+     "err_ms": -0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 18432,
+     "pts_time": 1.2,
+     "arr_seq": 18,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 72,
+   "T": 2.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 36864,
+     "pts_time": 2.4,
+     "arr_seq": 72,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 26112,
+     "pts_time": 2.04,
+     "arr_seq": 51,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 39424,
+     "pts_time": 3.208333,
+     "arr_seq": 77,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 18432,
+     "pts_time": 1.2,
+     "arr_seq": 18,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 73,
+   "T": 2.433333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 37376,
+     "pts_time": 2.433333,
+     "arr_seq": 73,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 26624,
+     "pts_time": 2.08,
+     "arr_seq": 52,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 39936,
+     "pts_time": 3.25,
+     "arr_seq": 78,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 18432,
+     "pts_time": 1.2,
+     "arr_seq": 18,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 74,
+   "T": 2.466667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 37888,
+     "pts_time": 2.466667,
+     "arr_seq": 74,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 27136,
+     "pts_time": 2.12,
+     "arr_seq": 53,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 39936,
+     "pts_time": 3.25,
+     "arr_seq": 78,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 19456,
+     "pts_time": 1.266667,
+     "arr_seq": 19,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 75,
+   "T": 2.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 38400,
+     "pts_time": 2.5,
+     "arr_seq": 75,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 27648,
+     "pts_time": 2.16,
+     "arr_seq": 54,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 40448,
+     "pts_time": 3.291667,
+     "arr_seq": 79,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 20480,
+     "pts_time": 1.333333,
+     "arr_seq": 20,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 76,
+   "T": 2.533333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 38912,
+     "pts_time": 2.533333,
+     "arr_seq": 76,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 28160,
+     "pts_time": 2.2,
+     "arr_seq": 55,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 40960,
+     "pts_time": 3.333333,
+     "arr_seq": 80,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 20480,
+     "pts_time": 1.333333,
+     "arr_seq": 20,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 77,
+   "T": 2.566667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 39424,
+     "pts_time": 2.566667,
+     "arr_seq": 77,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 28160,
+     "pts_time": 2.2,
+     "arr_seq": 55,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 41472,
+     "pts_time": 3.375,
+     "arr_seq": 81,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 21504,
+     "pts_time": 1.4,
+     "arr_seq": 21,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 78,
+   "T": 2.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 39936,
+     "pts_time": 2.6,
+     "arr_seq": 78,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 28672,
+     "pts_time": 2.24,
+     "arr_seq": 56,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 41984,
+     "pts_time": 3.416667,
+     "arr_seq": 82,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 21504,
+     "pts_time": 1.4,
+     "arr_seq": 21,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 79,
+   "T": 2.633333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 40448,
+     "pts_time": 2.633333,
+     "arr_seq": 79,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 29184,
+     "pts_time": 2.28,
+     "arr_seq": 57,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 41984,
+     "pts_time": 3.416667,
+     "arr_seq": 82,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 22528,
+     "pts_time": 1.466667,
+     "arr_seq": 22,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 80,
+   "T": 2.666667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 40960,
+     "pts_time": 2.666667,
+     "arr_seq": 80,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 29696,
+     "pts_time": 2.32,
+     "arr_seq": 58,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 42496,
+     "pts_time": 3.458333,
+     "arr_seq": 83,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 22528,
+     "pts_time": 1.466667,
+     "arr_seq": 22,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 81,
+   "T": 2.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 41472,
+     "pts_time": 2.7,
+     "arr_seq": 81,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 30208,
+     "pts_time": 2.36,
+     "arr_seq": 59,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 43008,
+     "pts_time": 3.5,
+     "arr_seq": 84,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 23552,
+     "pts_time": 1.533333,
+     "arr_seq": 23,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 82,
+   "T": 2.733333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 41984,
+     "pts_time": 2.733333,
+     "arr_seq": 82,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 30720,
+     "pts_time": 2.4,
+     "arr_seq": 60,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 43520,
+     "pts_time": 3.541667,
+     "arr_seq": 85,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 23552,
+     "pts_time": 1.533333,
+     "arr_seq": 23,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 83,
+   "T": 2.766667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 42496,
+     "pts_time": 2.766667,
+     "arr_seq": 83,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 30720,
+     "pts_time": 2.4,
+     "arr_seq": 60,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 44032,
+     "pts_time": 3.583333,
+     "arr_seq": 86,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 23552,
+     "pts_time": 1.533333,
+     "arr_seq": 23,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 84,
+   "T": 2.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 43008,
+     "pts_time": 2.8,
+     "arr_seq": 84,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 31232,
+     "pts_time": 2.44,
+     "arr_seq": 61,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 44032,
+     "pts_time": 3.583333,
+     "arr_seq": 86,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 24576,
+     "pts_time": 1.6,
+     "arr_seq": 24,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 85,
+   "T": 2.833333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 43520,
+     "pts_time": 2.833333,
+     "arr_seq": 85,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 31744,
+     "pts_time": 2.48,
+     "arr_seq": 62,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 44544,
+     "pts_time": 3.625,
+     "arr_seq": 87,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 25600,
+     "pts_time": 1.666667,
+     "arr_seq": 25,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 86,
+   "T": 2.866667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 44032,
+     "pts_time": 2.866667,
+     "arr_seq": 86,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 32256,
+     "pts_time": 2.52,
+     "arr_seq": 63,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 45056,
+     "pts_time": 3.666667,
+     "arr_seq": 88,
+     "err_ms": -0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 25600,
+     "pts_time": 1.666667,
+     "arr_seq": 25,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 87,
+   "T": 2.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 44544,
+     "pts_time": 2.9,
+     "arr_seq": 87,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 32768,
+     "pts_time": 2.56,
+     "arr_seq": 64,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 45568,
+     "pts_time": 3.708333,
+     "arr_seq": 89,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 25600,
+     "pts_time": 1.666667,
+     "arr_seq": 25,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 88,
+   "T": 2.933333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 45056,
+     "pts_time": 2.933333,
+     "arr_seq": 88,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 33280,
+     "pts_time": 2.6,
+     "arr_seq": 65,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 46080,
+     "pts_time": 3.75,
+     "arr_seq": 90,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 26624,
+     "pts_time": 1.733333,
+     "arr_seq": 26,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 89,
+   "T": 2.966667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 45568,
+     "pts_time": 2.966667,
+     "arr_seq": 89,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 33280,
+     "pts_time": 2.6,
+     "arr_seq": 65,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 46080,
+     "pts_time": 3.75,
+     "arr_seq": 90,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 27648,
+     "pts_time": 1.8,
+     "arr_seq": 27,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 90,
+   "T": 3.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 46080,
+     "pts_time": 3.0,
+     "arr_seq": 90,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 33792,
+     "pts_time": 2.64,
+     "arr_seq": 66,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 46592,
+     "pts_time": 3.791667,
+     "arr_seq": 91,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 27648,
+     "pts_time": 1.8,
+     "arr_seq": 27,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 91,
+   "T": 3.033333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 46592,
+     "pts_time": 3.033333,
+     "arr_seq": 91,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 34304,
+     "pts_time": 2.68,
+     "arr_seq": 67,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 47104,
+     "pts_time": 3.833333,
+     "arr_seq": 92,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 27648,
+     "pts_time": 1.8,
+     "arr_seq": 27,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 92,
+   "T": 3.066667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 47104,
+     "pts_time": 3.066667,
+     "arr_seq": 92,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 34816,
+     "pts_time": 2.72,
+     "arr_seq": 68,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 47616,
+     "pts_time": 3.875,
+     "arr_seq": 93,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 28672,
+     "pts_time": 1.866667,
+     "arr_seq": 28,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 93,
+   "T": 3.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 47616,
+     "pts_time": 3.1,
+     "arr_seq": 93,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 35328,
+     "pts_time": 2.76,
+     "arr_seq": 69,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 48128,
+     "pts_time": 3.916667,
+     "arr_seq": 94,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 29696,
+     "pts_time": 1.933333,
+     "arr_seq": 29,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 94,
+   "T": 3.133333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 48128,
+     "pts_time": 3.133333,
+     "arr_seq": 94,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 35840,
+     "pts_time": 2.8,
+     "arr_seq": 70,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 48128,
+     "pts_time": 3.916667,
+     "arr_seq": 94,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 29696,
+     "pts_time": 1.933333,
+     "arr_seq": 29,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 95,
+   "T": 3.166667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 48640,
+     "pts_time": 3.166667,
+     "arr_seq": 95,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 35840,
+     "pts_time": 2.8,
+     "arr_seq": 70,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 48640,
+     "pts_time": 3.958333,
+     "arr_seq": 95,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 29696,
+     "pts_time": 1.933333,
+     "arr_seq": 29,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 96,
+   "T": 3.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 49152,
+     "pts_time": 3.2,
+     "arr_seq": 96,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 36352,
+     "pts_time": 2.84,
+     "arr_seq": 71,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 49152,
+     "pts_time": 4.0,
+     "arr_seq": 96,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 30720,
+     "pts_time": 2.0,
+     "arr_seq": 30,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 97,
+   "T": 3.233333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 49664,
+     "pts_time": 3.233333,
+     "arr_seq": 97,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 36864,
+     "pts_time": 2.88,
+     "arr_seq": 72,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 49664,
+     "pts_time": 4.041667,
+     "arr_seq": 97,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 30720,
+     "pts_time": 2.0,
+     "arr_seq": 30,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 98,
+   "T": 3.266667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 50176,
+     "pts_time": 3.266667,
+     "arr_seq": 98,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 37376,
+     "pts_time": 2.92,
+     "arr_seq": 73,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 50176,
+     "pts_time": 4.083333,
+     "arr_seq": 98,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 31744,
+     "pts_time": 2.066667,
+     "arr_seq": 31,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 99,
+   "T": 3.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 50688,
+     "pts_time": 3.3,
+     "arr_seq": 99,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 37888,
+     "pts_time": 2.96,
+     "arr_seq": 74,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 50176,
+     "pts_time": 4.083333,
+     "arr_seq": 98,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 31744,
+     "pts_time": 2.066667,
+     "arr_seq": 31,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 100,
+   "T": 3.333333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 51200,
+     "pts_time": 3.333333,
+     "arr_seq": 100,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 38400,
+     "pts_time": 3.0,
+     "arr_seq": 75,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 50688,
+     "pts_time": 4.125,
+     "arr_seq": 99,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 32768,
+     "pts_time": 2.133333,
+     "arr_seq": 32,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 101,
+   "T": 3.366667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 51712,
+     "pts_time": 3.366667,
+     "arr_seq": 101,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 38400,
+     "pts_time": 3.0,
+     "arr_seq": 75,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 51200,
+     "pts_time": 4.166667,
+     "arr_seq": 100,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 33792,
+     "pts_time": 2.2,
+     "arr_seq": 33,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 102,
+   "T": 3.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 52224,
+     "pts_time": 3.4,
+     "arr_seq": 102,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 38912,
+     "pts_time": 3.04,
+     "arr_seq": 76,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 51712,
+     "pts_time": 4.208333,
+     "arr_seq": 101,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 33792,
+     "pts_time": 2.2,
+     "arr_seq": 33,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 103,
+   "T": 3.433333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 52736,
+     "pts_time": 3.433333,
+     "arr_seq": 103,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 39424,
+     "pts_time": 3.08,
+     "arr_seq": 77,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 52224,
+     "pts_time": 4.25,
+     "arr_seq": 102,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 33792,
+     "pts_time": 2.2,
+     "arr_seq": 33,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 104,
+   "T": 3.466667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 53248,
+     "pts_time": 3.466667,
+     "arr_seq": 104,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 39936,
+     "pts_time": 3.12,
+     "arr_seq": 78,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 52224,
+     "pts_time": 4.25,
+     "arr_seq": 102,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 34816,
+     "pts_time": 2.266667,
+     "arr_seq": 34,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 105,
+   "T": 3.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 53760,
+     "pts_time": 3.5,
+     "arr_seq": 105,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 40448,
+     "pts_time": 3.16,
+     "arr_seq": 79,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 52736,
+     "pts_time": 4.291667,
+     "arr_seq": 103,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 34816,
+     "pts_time": 2.266667,
+     "arr_seq": 34,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 106,
+   "T": 3.533333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 54272,
+     "pts_time": 3.533333,
+     "arr_seq": 106,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 40960,
+     "pts_time": 3.2,
+     "arr_seq": 80,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 53248,
+     "pts_time": 4.333333,
+     "arr_seq": 104,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 35840,
+     "pts_time": 2.333333,
+     "arr_seq": 35,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 107,
+   "T": 3.566667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 54784,
+     "pts_time": 3.566667,
+     "arr_seq": 107,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 40960,
+     "pts_time": 3.2,
+     "arr_seq": 80,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 53760,
+     "pts_time": 4.375,
+     "arr_seq": 105,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 36864,
+     "pts_time": 2.4,
+     "arr_seq": 36,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 108,
+   "T": 3.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 55296,
+     "pts_time": 3.6,
+     "arr_seq": 108,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 41472,
+     "pts_time": 3.24,
+     "arr_seq": 81,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 54272,
+     "pts_time": 4.416667,
+     "arr_seq": 106,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 36864,
+     "pts_time": 2.4,
+     "arr_seq": 36,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 109,
+   "T": 3.633333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 55808,
+     "pts_time": 3.633333,
+     "arr_seq": 109,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 41984,
+     "pts_time": 3.28,
+     "arr_seq": 82,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 54272,
+     "pts_time": 4.416667,
+     "arr_seq": 106,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 37888,
+     "pts_time": 2.466667,
+     "arr_seq": 37,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 110,
+   "T": 3.666667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 56320,
+     "pts_time": 3.666667,
+     "arr_seq": 110,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 42496,
+     "pts_time": 3.32,
+     "arr_seq": 83,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 54784,
+     "pts_time": 4.458333,
+     "arr_seq": 107,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 37888,
+     "pts_time": 2.466667,
+     "arr_seq": 37,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 111,
+   "T": 3.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 56832,
+     "pts_time": 3.7,
+     "arr_seq": 111,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 43008,
+     "pts_time": 3.36,
+     "arr_seq": 84,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 55296,
+     "pts_time": 4.5,
+     "arr_seq": 108,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 37888,
+     "pts_time": 2.466667,
+     "arr_seq": 37,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 112,
+   "T": 3.733333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 57344,
+     "pts_time": 3.733333,
+     "arr_seq": 112,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 43520,
+     "pts_time": 3.4,
+     "arr_seq": 85,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 55808,
+     "pts_time": 4.541667,
+     "arr_seq": 109,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 38912,
+     "pts_time": 2.533333,
+     "arr_seq": 38,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 113,
+   "T": 3.766667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 57856,
+     "pts_time": 3.766667,
+     "arr_seq": 113,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 43520,
+     "pts_time": 3.4,
+     "arr_seq": 85,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 56320,
+     "pts_time": 4.583333,
+     "arr_seq": 110,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 38912,
+     "pts_time": 2.533333,
+     "arr_seq": 38,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 114,
+   "T": 3.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 58368,
+     "pts_time": 3.8,
+     "arr_seq": 114,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 44032,
+     "pts_time": 3.44,
+     "arr_seq": 86,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 56320,
+     "pts_time": 4.583333,
+     "arr_seq": 110,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 39936,
+     "pts_time": 2.6,
+     "arr_seq": 39,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 115,
+   "T": 3.833333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 58880,
+     "pts_time": 3.833333,
+     "arr_seq": 115,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 44544,
+     "pts_time": 3.48,
+     "arr_seq": 87,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 56832,
+     "pts_time": 4.625,
+     "arr_seq": 111,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 40960,
+     "pts_time": 2.666667,
+     "arr_seq": 40,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 116,
+   "T": 3.866667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 59392,
+     "pts_time": 3.866667,
+     "arr_seq": 116,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 45056,
+     "pts_time": 3.52,
+     "arr_seq": 88,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 57344,
+     "pts_time": 4.666667,
+     "arr_seq": 112,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 40960,
+     "pts_time": 2.666667,
+     "arr_seq": 40,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 117,
+   "T": 3.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 59904,
+     "pts_time": 3.9,
+     "arr_seq": 117,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 45568,
+     "pts_time": 3.56,
+     "arr_seq": 89,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 57856,
+     "pts_time": 4.708333,
+     "arr_seq": 113,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 41984,
+     "pts_time": 2.733333,
+     "arr_seq": 41,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 118,
+   "T": 3.933333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 60416,
+     "pts_time": 3.933333,
+     "arr_seq": 118,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 46080,
+     "pts_time": 3.6,
+     "arr_seq": 90,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 58368,
+     "pts_time": 4.75,
+     "arr_seq": 114,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 41984,
+     "pts_time": 2.733333,
+     "arr_seq": 41,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 119,
+   "T": 3.966667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 60928,
+     "pts_time": 3.966667,
+     "arr_seq": 119,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 46080,
+     "pts_time": 3.6,
+     "arr_seq": 90,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 58368,
+     "pts_time": 4.75,
+     "arr_seq": 114,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 41984,
+     "pts_time": 2.733333,
+     "arr_seq": 41,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 120,
+   "T": 4.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 61440,
+     "pts_time": 4.0,
+     "arr_seq": 120,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 46592,
+     "pts_time": 3.64,
+     "arr_seq": 91,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 58880,
+     "pts_time": 4.791667,
+     "arr_seq": 115,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 43008,
+     "pts_time": 2.8,
+     "arr_seq": 42,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 121,
+   "T": 4.033333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 61952,
+     "pts_time": 4.033333,
+     "arr_seq": 121,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 47104,
+     "pts_time": 3.68,
+     "arr_seq": 92,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 59392,
+     "pts_time": 4.833333,
+     "arr_seq": 116,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 43008,
+     "pts_time": 2.8,
+     "arr_seq": 42,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 122,
+   "T": 4.066667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 62464,
+     "pts_time": 4.066667,
+     "arr_seq": 122,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 47616,
+     "pts_time": 3.72,
+     "arr_seq": 93,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 59904,
+     "pts_time": 4.875,
+     "arr_seq": 117,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 44032,
+     "pts_time": 2.866667,
+     "arr_seq": 43,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 123,
+   "T": 4.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 62976,
+     "pts_time": 4.1,
+     "arr_seq": 123,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 48128,
+     "pts_time": 3.76,
+     "arr_seq": 94,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 60416,
+     "pts_time": 4.916667,
+     "arr_seq": 118,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 44032,
+     "pts_time": 2.866667,
+     "arr_seq": 43,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 124,
+   "T": 4.133333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 63488,
+     "pts_time": 4.133333,
+     "arr_seq": 124,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 48640,
+     "pts_time": 3.8,
+     "arr_seq": 95,
+     "err_ms": 16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 60416,
+     "pts_time": 4.916667,
+     "arr_seq": 118,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 45056,
+     "pts_time": 2.933333,
+     "arr_seq": 44,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 125,
+   "T": 4.166667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 64000,
+     "pts_time": 4.166667,
+     "arr_seq": 125,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 48640,
+     "pts_time": 3.8,
+     "arr_seq": 95,
+     "err_ms": -16.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 60928,
+     "pts_time": 4.958333,
+     "arr_seq": 119,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 46080,
+     "pts_time": 3.0,
+     "arr_seq": 45,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 126,
+   "T": 4.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 64512,
+     "pts_time": 4.2,
+     "arr_seq": 126,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 49152,
+     "pts_time": 3.84,
+     "arr_seq": 96,
+     "err_ms": -10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 61440,
+     "pts_time": 5.0,
+     "arr_seq": 120,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 46080,
+     "pts_time": 3.0,
+     "arr_seq": 45,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 127,
+   "T": 4.233333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 65024,
+     "pts_time": 4.233333,
+     "arr_seq": 127,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 49664,
+     "pts_time": 3.88,
+     "arr_seq": 97,
+     "err_ms": -3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 61952,
+     "pts_time": 5.041667,
+     "arr_seq": 121,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 46080,
+     "pts_time": 3.0,
+     "arr_seq": 45,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 128,
+   "T": 4.266667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 65536,
+     "pts_time": 4.266667,
+     "arr_seq": 128,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 50176,
+     "pts_time": 3.92,
+     "arr_seq": 98,
+     "err_ms": 3.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 62464,
+     "pts_time": 5.083333,
+     "arr_seq": 122,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 47104,
+     "pts_time": 3.066667,
+     "arr_seq": 46,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 129,
+   "T": 4.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 66048,
+     "pts_time": 4.3,
+     "arr_seq": 129,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": 10.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 62464,
+     "pts_time": 5.083333,
+     "arr_seq": 122,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 47104,
+     "pts_time": 3.066667,
+     "arr_seq": 46,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 130,
+   "T": 4.333333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 66560,
+     "pts_time": 4.333333,
+     "arr_seq": 130,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -23.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 62976,
+     "pts_time": 5.125,
+     "arr_seq": 123,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 48128,
+     "pts_time": 3.133333,
+     "arr_seq": 47,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 131,
+   "T": 4.366667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 67072,
+     "pts_time": 4.366667,
+     "arr_seq": 131,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -56.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 63488,
+     "pts_time": 5.166667,
+     "arr_seq": 124,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 48128,
+     "pts_time": 3.133333,
+     "arr_seq": 47,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 132,
+   "T": 4.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 67584,
+     "pts_time": 4.4,
+     "arr_seq": 132,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -90.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 64000,
+     "pts_time": 5.208333,
+     "arr_seq": 125,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 49152,
+     "pts_time": 3.2,
+     "arr_seq": 48,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 133,
+   "T": 4.433333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 68096,
+     "pts_time": 4.433333,
+     "arr_seq": 133,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -123.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 64512,
+     "pts_time": 5.25,
+     "arr_seq": 126,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 49152,
+     "pts_time": 3.2,
+     "arr_seq": 48,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 134,
+   "T": 4.466667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 68608,
+     "pts_time": 4.466667,
+     "arr_seq": 134,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -156.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 64512,
+     "pts_time": 5.25,
+     "arr_seq": 126,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 50176,
+     "pts_time": 3.266667,
+     "arr_seq": 49,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 135,
+   "T": 4.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 69120,
+     "pts_time": 4.5,
+     "arr_seq": 135,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -190.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 65024,
+     "pts_time": 5.291667,
+     "arr_seq": 127,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 50176,
+     "pts_time": 3.266667,
+     "arr_seq": 49,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 136,
+   "T": 4.533333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 69632,
+     "pts_time": 4.533333,
+     "arr_seq": 136,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -223.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 65536,
+     "pts_time": 5.333333,
+     "arr_seq": 128,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 51200,
+     "pts_time": 3.333333,
+     "arr_seq": 50,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 137,
+   "T": 4.566667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 70144,
+     "pts_time": 4.566667,
+     "arr_seq": 137,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -256.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 66048,
+     "pts_time": 5.375,
+     "arr_seq": 129,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 51200,
+     "pts_time": 3.333333,
+     "arr_seq": 50,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 138,
+   "T": 4.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 70656,
+     "pts_time": 4.6,
+     "arr_seq": 138,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -290.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 66560,
+     "pts_time": 5.416667,
+     "arr_seq": 130,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 52224,
+     "pts_time": 3.4,
+     "arr_seq": 51,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 139,
+   "T": 4.633333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 71168,
+     "pts_time": 4.633333,
+     "arr_seq": 139,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -323.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 66560,
+     "pts_time": 5.416667,
+     "arr_seq": 130,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 53248,
+     "pts_time": 3.466667,
+     "arr_seq": 52,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 140,
+   "T": 4.666667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 71680,
+     "pts_time": 4.666667,
+     "arr_seq": 140,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -356.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 67072,
+     "pts_time": 5.458333,
+     "arr_seq": 131,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 53248,
+     "pts_time": 3.466667,
+     "arr_seq": 52,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 141,
+   "T": 4.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 72192,
+     "pts_time": 4.7,
+     "arr_seq": 141,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -390.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 67584,
+     "pts_time": 5.5,
+     "arr_seq": 132,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 53248,
+     "pts_time": 3.466667,
+     "arr_seq": 52,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 142,
+   "T": 4.733333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 72704,
+     "pts_time": 4.733333,
+     "arr_seq": 142,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -423.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 68096,
+     "pts_time": 5.541667,
+     "arr_seq": 133,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 54272,
+     "pts_time": 3.533333,
+     "arr_seq": 53,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 143,
+   "T": 4.766667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 73216,
+     "pts_time": 4.766667,
+     "arr_seq": 143,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -456.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 68608,
+     "pts_time": 5.583333,
+     "arr_seq": 134,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 54272,
+     "pts_time": 3.533333,
+     "arr_seq": 53,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 144,
+   "T": 4.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 73728,
+     "pts_time": 4.8,
+     "arr_seq": 144,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -490.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 68608,
+     "pts_time": 5.583333,
+     "arr_seq": 134,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 55296,
+     "pts_time": 3.6,
+     "arr_seq": 54,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 145,
+   "T": 4.833333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 74240,
+     "pts_time": 4.833333,
+     "arr_seq": 145,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -523.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 69120,
+     "pts_time": 5.625,
+     "arr_seq": 135,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 55296,
+     "pts_time": 3.6,
+     "arr_seq": 54,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 146,
+   "T": 4.866667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 74752,
+     "pts_time": 4.866667,
+     "arr_seq": 146,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -556.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 69632,
+     "pts_time": 5.666667,
+     "arr_seq": 136,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 56320,
+     "pts_time": 3.666667,
+     "arr_seq": 55,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 147,
+   "T": 4.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 75264,
+     "pts_time": 4.9,
+     "arr_seq": 147,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -590.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 70144,
+     "pts_time": 5.708333,
+     "arr_seq": 137,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 57344,
+     "pts_time": 3.733333,
+     "arr_seq": 56,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 148,
+   "T": 4.933333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 75776,
+     "pts_time": 4.933333,
+     "arr_seq": 148,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -623.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 70656,
+     "pts_time": 5.75,
+     "arr_seq": 138,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 57344,
+     "pts_time": 3.733333,
+     "arr_seq": 56,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 149,
+   "T": 4.966667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 76288,
+     "pts_time": 4.966667,
+     "arr_seq": 149,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -656.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 70656,
+     "pts_time": 5.75,
+     "arr_seq": 138,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 57344,
+     "pts_time": 3.733333,
+     "arr_seq": 56,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 150,
+   "T": 5.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 76800,
+     "pts_time": 5.0,
+     "arr_seq": 150,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -690.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 71168,
+     "pts_time": 5.791667,
+     "arr_seq": 139,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 58368,
+     "pts_time": 3.8,
+     "arr_seq": 57,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 151,
+   "T": 5.033333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 77312,
+     "pts_time": 5.033333,
+     "arr_seq": 151,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -723.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 71680,
+     "pts_time": 5.833333,
+     "arr_seq": 140,
+     "err_ms": 0.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 58368,
+     "pts_time": 3.8,
+     "arr_seq": 57,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 152,
+   "T": 5.066667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 77824,
+     "pts_time": 5.066667,
+     "arr_seq": 152,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -756.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 72192,
+     "pts_time": 5.875,
+     "arr_seq": 141,
+     "err_ms": 8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 59392,
+     "pts_time": 3.866667,
+     "arr_seq": 58,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 153,
+   "T": 5.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 78336,
+     "pts_time": 5.1,
+     "arr_seq": 153,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -790.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 72704,
+     "pts_time": 5.916667,
+     "arr_seq": 142,
+     "err_ms": 16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 59392,
+     "pts_time": 3.866667,
+     "arr_seq": 58,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 154,
+   "T": 5.133333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 78848,
+     "pts_time": 5.133333,
+     "arr_seq": 154,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -823.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 72704,
+     "pts_time": 5.916667,
+     "arr_seq": 142,
+     "err_ms": -16.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 60416,
+     "pts_time": 3.933333,
+     "arr_seq": 59,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 155,
+   "T": 5.166667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 79360,
+     "pts_time": 5.166667,
+     "arr_seq": 155,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -856.667
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -8.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 61440,
+     "pts_time": 4.0,
+     "arr_seq": 60,
+     "err_ms": 33.333
+    }
+   }
+  },
+  {
+   "k": 156,
+   "T": 5.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 79872,
+     "pts_time": 5.2,
+     "arr_seq": 156,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -890.0
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -41.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 61440,
+     "pts_time": 4.0,
+     "arr_seq": 60,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 157,
+   "T": 5.233333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 80384,
+     "pts_time": 5.233333,
+     "arr_seq": 157,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -923.333
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -75.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 61440,
+     "pts_time": 4.0,
+     "arr_seq": 60,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 158,
+   "T": 5.266667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 80896,
+     "pts_time": 5.266667,
+     "arr_seq": 158,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -956.667
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -108.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 62464,
+     "pts_time": 4.066667,
+     "arr_seq": 61,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 159,
+   "T": 5.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 81408,
+     "pts_time": 5.3,
+     "arr_seq": 159,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -990.0
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -141.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 62464,
+     "pts_time": 4.066667,
+     "arr_seq": 61,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 160,
+   "T": 5.333333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 81920,
+     "pts_time": 5.333333,
+     "arr_seq": 160,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1023.333
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -175.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 63488,
+     "pts_time": 4.133333,
+     "arr_seq": 62,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 161,
+   "T": 5.366667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 82432,
+     "pts_time": 5.366667,
+     "arr_seq": 161,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1056.667
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -208.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 63488,
+     "pts_time": 4.133333,
+     "arr_seq": 62,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 162,
+   "T": 5.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 82944,
+     "pts_time": 5.4,
+     "arr_seq": 162,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1090.0
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -241.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 64512,
+     "pts_time": 4.2,
+     "arr_seq": 63,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 163,
+   "T": 5.433333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 83456,
+     "pts_time": 5.433333,
+     "arr_seq": 163,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1123.333
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -275.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 64512,
+     "pts_time": 4.2,
+     "arr_seq": 63,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 164,
+   "T": 5.466667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 83968,
+     "pts_time": 5.466667,
+     "arr_seq": 164,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1156.667
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -308.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 65536,
+     "pts_time": 4.266667,
+     "arr_seq": 64,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 165,
+   "T": 5.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 84480,
+     "pts_time": 5.5,
+     "arr_seq": 165,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1190.0
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -341.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 65536,
+     "pts_time": 4.266667,
+     "arr_seq": 64,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 166,
+   "T": 5.533333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 84992,
+     "pts_time": 5.533333,
+     "arr_seq": 166,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1223.333
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -375.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 66560,
+     "pts_time": 4.333333,
+     "arr_seq": 65,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 167,
+   "T": 5.566667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 85504,
+     "pts_time": 5.566667,
+     "arr_seq": 167,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1256.667
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -408.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 66560,
+     "pts_time": 4.333333,
+     "arr_seq": 65,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 168,
+   "T": 5.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 86016,
+     "pts_time": 5.6,
+     "arr_seq": 168,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1290.0
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -441.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 67584,
+     "pts_time": 4.4,
+     "arr_seq": 66,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 169,
+   "T": 5.633333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 86528,
+     "pts_time": 5.633333,
+     "arr_seq": 169,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1323.333
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -475.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 67584,
+     "pts_time": 4.4,
+     "arr_seq": 66,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 170,
+   "T": 5.666667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 87040,
+     "pts_time": 5.666667,
+     "arr_seq": 170,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1356.667
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -508.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 68608,
+     "pts_time": 4.466667,
+     "arr_seq": 67,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 171,
+   "T": 5.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 87552,
+     "pts_time": 5.7,
+     "arr_seq": 171,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1390.0
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -541.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 68608,
+     "pts_time": 4.466667,
+     "arr_seq": 67,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 172,
+   "T": 5.733333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 88064,
+     "pts_time": 5.733333,
+     "arr_seq": 172,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1423.333
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -575.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 69632,
+     "pts_time": 4.533333,
+     "arr_seq": 68,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 173,
+   "T": 5.766667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 88576,
+     "pts_time": 5.766667,
+     "arr_seq": 173,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1456.667
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -608.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 69632,
+     "pts_time": 4.533333,
+     "arr_seq": 68,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 174,
+   "T": 5.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 89088,
+     "pts_time": 5.8,
+     "arr_seq": 174,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1490.0
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -641.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 70656,
+     "pts_time": 4.6,
+     "arr_seq": 69,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 175,
+   "T": 5.833333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 89600,
+     "pts_time": 5.833333,
+     "arr_seq": 175,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1523.333
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -675.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 70656,
+     "pts_time": 4.6,
+     "arr_seq": 69,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 176,
+   "T": 5.866667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 90112,
+     "pts_time": 5.866667,
+     "arr_seq": 176,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1556.667
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -708.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 71680,
+     "pts_time": 4.666667,
+     "arr_seq": 70,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 177,
+   "T": 5.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 90624,
+     "pts_time": 5.9,
+     "arr_seq": 177,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1590.0
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -741.667
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 71680,
+     "pts_time": 4.666667,
+     "arr_seq": 70,
+     "err_ms": -33.333
+    }
+   }
+  },
+  {
+   "k": 178,
+   "T": 5.933333,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 91136,
+     "pts_time": 5.933333,
+     "arr_seq": 178,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1623.333
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -775.0
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 72704,
+     "pts_time": 4.733333,
+     "arr_seq": 71,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 179,
+   "T": 5.966667,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 91648,
+     "pts_time": 5.966667,
+     "arr_seq": 179,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 50688,
+     "pts_time": 3.96,
+     "arr_seq": 99,
+     "err_ms": -1656.667
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 73216,
+     "pts_time": 5.958333,
+     "arr_seq": 143,
+     "err_ms": -808.333
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 72704,
+     "pts_time": 4.733333,
+     "arr_seq": 71,
+     "err_ms": -33.333
+    }
+   }
+  }
+ ],
+ "metrics": {
+  "camA": {
+   "picks": 180,
+   "stalls": 0,
+   "held": 0,
+   "ended_ticks": 0,
+   "not_started_ticks": 0,
+   "errors": 0,
+   "mean_err_ms": 0.0,
+   "max_err_ms": 0.0
+  },
+  "camB": {
+   "picks": 119,
+   "stalls": 0,
+   "held": 0,
+   "ended_ticks": 50,
+   "not_started_ticks": 11,
+   "errors": 0,
+   "mean_err_ms": 9.94397759103642,
+   "max_err_ms": 16.66666666666705
+  },
+  "camC": {
+   "picks": 156,
+   "stalls": 0,
+   "held": 0,
+   "ended_ticks": 24,
+   "not_started_ticks": 0,
+   "errors": 0,
+   "mean_err_ms": 9.98931623931625,
+   "max_err_ms": 16.666666666667496
+  },
+  "camD": {
+   "picks": 144,
+   "stalls": 0,
+   "held": 0,
+   "ended_ticks": 0,
+   "not_started_ticks": 36,
+   "errors": 0,
+   "mean_err_ms": 16.666666666666668,
+   "max_err_ms": 33.33333333333333
+  }
+ }
+}
