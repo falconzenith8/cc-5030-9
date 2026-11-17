@@ -36,6 +36,7 @@ INDEX_HTML = """<!doctype html>
   td.name, th.name { text-align:left; }
   .st-OK { color:#5fd07a; } .st-STALLED { color:#f0a03c; } .st-ENDED { color:#7c9be0; }
   .st-HELD { color:#e0d060; } .st-ERROR { color:#e05555; } .st-NOT_STARTED { color:#999; }
+  .st-GAP { color:#e07ae0; }
   #events { height:130px; overflow-y:auto; background:#101014; border:1px solid #2c2c36;
             border-radius:6px; padding:6px 8px; font:12px ui-monospace,monospace;
             margin-top:10px; white-space:pre-wrap; }
@@ -51,7 +52,7 @@ INDEX_HTML = """<!doctype html>
   <label>取帧策略 <select id="policy">
     <option value="nearest">nearest 最近帧</option>
     <option value="hold">hold 保持(≤target)</option></select></label>
-  <label>参考时钟 <select id="reference"><option value="virtual">virtual 虚拟钟</option></select></label>
+  <label>参考时钟 <select id="reference"></select></label>
   <label>音频监听 <select id="audio"><option value="mute">静音</option></select></label>
   <label>有界等待 <input id="waitms" type="number" min="0" max="2000" step="10" style="width:70px"> ms</label>
   <label>速度 <select id="speed"><option>0.5</option><option selected>1.0</option>
@@ -67,10 +68,10 @@ INDEX_HTML = """<!doctype html>
 <div id="stage"><img id="comp" alt="composite"></div>
 <table id="streams">
   <thead><tr>
-    <th class="name">机位</th><th>状态</th><th>偏移s</th><th>fps</th><th>时间基</th>
+    <th class="name">机位</th><th>状态</th><th>共同事件</th><th>偏移s</th><th>fps</th><th>时间基</th>
     <th>目标pts</th><th>选中pts</th><th>原始pts</th><th>误差ms</th>
     <th>到达序</th><th>解码包序</th><th>帧型</th><th>已解码</th>
-    <th>取帧数</th><th>停滞</th><th>平均误差</th><th>最大误差</th>
+    <th>取帧数</th><th>停滞</th><th>缺段</th><th>平均误差</th><th>最大误差</th>
   </tr></thead><tbody></tbody>
 </table>
 <div id="events"></div>
@@ -106,13 +107,16 @@ $('applydelay').onclick = () => ctl({action:'set_decode_delay',
 
 function fillSelect(sel, items, keep) {
   const cur = keep ? sel.value : null;
-  const first = sel.querySelector('option');
-  sel.innerHTML = ''; if (first) sel.appendChild(first);
+  sel.innerHTML = '';
   for (const it of items) {
     const o = document.createElement('option');
-    o.value = it; o.textContent = it; sel.appendChild(o);
+    o.value = it.value || it; o.textContent = it.label || it; sel.appendChild(o);
   }
   if (cur && [...sel.options].some(o => o.value === cur)) sel.value = cur;
+}
+
+function refLabel(v) {
+  return v === 'virtual' ? 'virtual 虚拟钟' : v + ' 机位时钟';
 }
 
 async function refresh() {
@@ -124,8 +128,10 @@ async function refresh() {
   $('clock').textContent = 'T=' + s.T.toFixed(3) + 's' +
     (s.reference !== 'virtual' ? ' (跟随 ' + s.reference + ')' : '');
   streams = s.streams.map(x => x.name);
-  fillSelect($('reference'), streams, true);
-  fillSelect($('audio'), s.audio_available, true);
+  const refs = (s.reference_options && s.reference_options.length
+    ? s.reference_options : ['virtual', ...streams]);
+  fillSelect($('reference'), refs.map(v => ({value: v, label: refLabel(v)})), true);
+  fillSelect($('audio'), ['mute', ...s.audio_available], true);
   fillSelect($('delaystream'), streams, true);
   if (document.activeElement !== $('policy')) $('policy').value = s.policy;
   if (document.activeElement !== $('reference')) $('reference').value = s.reference;
@@ -141,6 +147,7 @@ async function refresh() {
     const tr = document.createElement('tr');
     tr.innerHTML =
       `<td class="name">${st.name}</td><td class="st-${st.state}">${st.state}</td>` +
+      `<td>${st.event_id || '-'}</td>` +
       `<td>${st.offset.toFixed(2)}</td><td>${st.fps ? st.fps.toFixed(2) : '-'}</td>` +
       `<td>${st.time_base || '-'}</td>` +
       `<td>${st.target == null ? '-' : st.target.toFixed(4)}</td>` +
@@ -150,7 +157,7 @@ async function refresh() {
       `<td>${st.arr_seq == null ? '-' : st.arr_seq}</td>` +
       `<td>${st.dec_seq == null ? '-' : st.dec_seq}</td>` +
       `<td>${st.pict || '-'}</td><td>${st.frames_decoded}</td>` +
-      `<td>${m.picks}</td><td>${m.stalls}</td>` +
+      `<td>${m.picks}</td><td>${m.stalls}</td><td>${m.gaps || 0}</td>` +
       `<td>${m.mean_err_ms.toFixed(1)}</td><td>${m.max_err_ms.toFixed(1)}</td>`;
     tb.appendChild(tr);
   }
@@ -164,7 +171,10 @@ async function refresh() {
   if (want !== lastAudio) {
     lastAudio = want;
     a.pause(); a.removeAttribute('src');
-    if (want) { a.src = '/audio/' + want + '.mp3'; a.load(); }
+    if (want) {
+      const ext = (s.audio_format && s.audio_format[want]) || 'wav';
+      a.src = '/audio/' + want + '.' + ext; a.load();
+    }
   }
   if (want) {
     const off = (s.streams.find(x => x.name === want) || {offset:0}).offset;
@@ -220,11 +230,13 @@ class PanelServer:
                     else:
                         self._send(200, png, "image/png")
                 elif path.startswith("/audio/"):
-                    name = os.path.basename(path)[:-4] if path.endswith(".mp3") else ""
+                    fname = os.path.basename(path)
+                    name = os.path.splitext(fname)[0]
                     f = app.audio_files.get(name)
                     if f and os.path.exists(f):
+                        ctype = "audio/wav" if f.endswith(".wav") else "audio/mpeg"
                         with open(f, "rb") as fh:
-                            self._send(200, fh.read(), "audio/mpeg")
+                            self._send(200, fh.read(), ctype)
                     else:
                         self._send(404, b"{}")
                 else:

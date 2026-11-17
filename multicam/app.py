@@ -4,45 +4,42 @@ Live mode runs a tick loop (~30 Hz): the reference clock produces T,
 the kernel picks frames, the composer renders one composite image.
 The reference clock can be the virtual wall clock or any stream's
 presentation position.  Audio monitoring is a single selectable source
-(extracted per stream, served to the panel) so sources never mix.
+(the package's own WAV, or an extracted track for legacy mp4 sources) so
+sources never mix.
 """
 import json
 import os
+import shutil
 import subprocess
 import threading
 import time
 
-import numpy as np
-
 from .compose import Composer, CellView
-from .kernel import Kernel, StreamConfig, OK
-from .media import StreamDecoder
-
-try:
-    import imageio_ffmpeg
-    FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
-except ImportError:
-    FFMPEG = "ffmpeg"
+from .imglib import write_png, write_gif
+from .kernel import Kernel, StreamConfig
+from .media import make_decoder, _HAS_AV
 
 TICK = 1.0 / 30.0
 
 
 class MultiCamApp:
-    def __init__(self, config, workdir="out"):
+    def __init__(self, config, workdir="out", pack_dir=None):
         self.config = config
         self.workdir = workdir
+        self.pack_dir = pack_dir
         os.makedirs(workdir, exist_ok=True)
         self.audio_dir = os.path.join(workdir, "audio_cache")
         os.makedirs(self.audio_dir, exist_ok=True)
 
-        streams = [StreamConfig(**s) for s in config["streams"]]
+        streams = [self._resolve_stream(s) for s in config["streams"]]
         self.speed = float(config.get("speed", 1.0))
         self.kernel = Kernel(
             streams,
             policy=config.get("policy", "nearest"),
             wait_budget=config.get("wait_budget_ms", 150) / 1000.0,
             on_stall=config.get("on_stall", "hold"),
-            continue_others_on_stall=config.get("continue_others_on_stall", True),
+            continue_others_on_stall=config.get(
+                "continue_others_on_stall", True),
             decoder_kwargs=dict(realtime=True, speed_getter=lambda: self.speed),
         )
         for name, delay in config.get("simulate_decode_delay", {}).items():
@@ -50,6 +47,8 @@ class MultiCamApp:
                 self.kernel.streams[name].decode_delay = delay
                 self.kernel.decoders[name].decode_delay = delay
 
+        refs = config.get("reference_options", ["virtual"])
+        self.reference_options = refs
         self.reference = config.get("reference", "virtual")   # or a stream name
         self.audio_source = config.get("audio_source")        # None => mute
         self.T = 0.0
@@ -64,13 +63,22 @@ class MultiCamApp:
         self._dirty = True
         self.audio_files = {}
 
+    def _resolve_stream(self, s):
+        cfg = dict(s)
+        path = cfg["path"]
+        if self.pack_dir and not os.path.isabs(path) and not os.path.exists(path):
+            candidate = os.path.join(self.pack_dir, path)
+            if os.path.exists(candidate):
+                cfg["path"] = candidate
+        return StreamConfig(**cfg)
+
     # ------------------------------------------------------------- lifecycle
     def start(self):
         self.kernel.start()
         for name, dec in self.kernel.decoders.items():
             if not dec.ready.wait(timeout=15):
                 self.kernel._log("error", f"{name}: decoder open timed out")
-        self._extract_audio()
+        self._collect_audio()
         self._t0 = time.monotonic()
         self._thread = threading.Thread(target=self._loop, name="multicam-loop",
                                         daemon=True)
@@ -86,7 +94,7 @@ class MultiCamApp:
             tick_start = time.monotonic()
             with self._lock:
                 if self.playing:
-                    self.T = self._clock_value()
+                    self.T = self._clock_value(tick_start)
                 if self.playing or self._dirty:
                     picks = self.kernel.step(self.T)
                     self.kernel.prune(self.T)
@@ -98,34 +106,51 @@ class MultiCamApp:
             if dt < TICK:
                 time.sleep(TICK - dt)
 
-    def _clock_value(self):
+    def _clock_value(self, now=None):
+        now = time.monotonic() if now is None else now
         if self.reference == "virtual":
-            return self._seek_base + (time.monotonic() - self._t0) * self.speed
-        # reference is a stream: production time follows its live
-        # presentation position (newest decoded frame).  If that stream
-        # stalls or ends, the whole timeline waits — it is the master.
+            return self._seek_base + (now - self._t0) * self.speed
+        # reference is a stream master. In a live pass the newest available
+        # frame drives T; when frames are bulk-preloaded the whole buffer is
+        # present at once, so pace the master by wall clock and clamp it to
+        # recorded frames (a gap/stall then makes the timeline wait).
         dec = self.kernel.decoders[self.reference]
         buf, _, _ = dec.snapshot()
-        if buf:
-            return buf[-1].time + self.kernel.streams[self.reference].offset
-        return self.T
+        if not buf:
+            return self.T
+        if getattr(dec, "_preloaded", False):
+            target_local = (self._seek_base
+                            + (now - self._t0) * self.speed
+                            - self.kernel.streams[self.reference].offset)
+            eligible = [f for f in buf if f.time <= target_local + 1e-9]
+            frame = eligible[-1] if eligible else buf[0]
+            return frame.time + self.kernel.streams[self.reference].offset
+        return buf[-1].time + self.kernel.streams[self.reference].offset
 
     def _cell_view(self, cfg, pick):
         return build_cell_view(self.kernel, cfg, pick)
 
     # ----------------------------------------------------------------- audio
-    def _extract_audio(self):
+    def _collect_audio(self):
+        """Package cameras already carry WAV; legacy mp4 streams need an
+        ffmpeg extraction (only attempted when that backend is in use)."""
         for name, dec in self.kernel.decoders.items():
-            if not dec.has_audio:
-                continue
-            out = os.path.join(self.audio_dir, f"{name}.mp3")
-            if not os.path.exists(out):
-                src = self.kernel.streams[name].path
-                subprocess.run(
-                    [FFMPEG, "-y", "-hide_banner", "-loglevel", "error",
-                     "-i", src, "-vn", "-ac", "1", "-ar", "44100",
-                     "-b:a", "96k", out], check=True)
-            self.audio_files[name] = out
+            wav = getattr(dec.package, "audio", None) if hasattr(dec, "package") else None
+            if wav and os.path.exists(wav):
+                dst = os.path.join(self.audio_dir, f"{name}.wav")
+                if not os.path.exists(dst):
+                    shutil.copyfile(wav, dst)
+                self.audio_files[name] = dst
+            elif getattr(dec, "has_audio", False):
+                dst = os.path.join(self.audio_dir, f"{name}.mp3")
+                if os.path.exists(dst):
+                    self.audio_files[name] = dst
+                elif shutil.which("ffmpeg"):
+                    subprocess.run(
+                        ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
+                         "-i", self.kernel.streams[name].path, "-vn", "-ac", "1",
+                         "-ar", "44100", "-b:a", "96k", dst], check=True)
+                    self.audio_files[name] = dst
 
     # --------------------------------------------------------------- control
     def control(self, payload):
@@ -135,16 +160,42 @@ class MultiCamApp:
             k = self.kernel
             if action == "play":
                 if not self.playing:
+                    # ensure every decoder has reached the playhead before
+                    # starting the clock, otherwise the wall clock advances
+                    # while a camera is still catching up (clock drift).
+                    # Cached package frames make this a short bounded wait.
+                    for name, dec in k.decoders.items():
+                        target = self.T - k.streams[name].offset
+                        if target < 0:
+                            continue
+                        deadline = time.monotonic() + k.wait_budget + 2.0
+                        dec.wait_for(
+                            lambda b, e, x, t=target:
+                            x is not None or e or
+                            any(f.time > t for f in b),
+                            max(0.0, deadline - time.monotonic()))
                     self._t0 = time.monotonic()
                     self._seek_base = self.T
                     self.playing = True
             elif action == "pause":
+                if self.playing:
+                    # freeze the reached time as the new anchor, otherwise
+                    # the wall-clock delta keeps accruing while paused and
+                    # jumps on the next play
+                    self.T = self._clock_value()
+                    self._seek_base = self.T
+                    self._t0 = time.monotonic()
                 self.playing = False
             elif action == "seek":
+                self.playing = False
                 self.T = max(0.0, float(payload["t"]))
                 self._seek_base = self.T
                 self._t0 = time.monotonic()
-                k.restart(start_at=max(0.0, self.T - 1.0), prod_t0=self.T)
+                # restart live decoders at the new position.  Frames are
+                # cached in the CameraPackage, so the re-decode is cheap and
+                # realtime availability pacing is preserved (no bulk EOF).
+                k.restart(start_at=max(0.0, self.T - 1.0),
+                          prod_t0=self.T, preload=False)
             elif action == "set_policy":
                 pol = payload["policy"]
                 if pol not in ("nearest", "hold"):
@@ -206,20 +257,26 @@ class MultiCamApp:
                 "playing": self.playing,
                 "speed": self.speed,
                 "reference": self.reference,
+                "reference_options": self.reference_options,
                 "audio_source": self.audio_source,
                 "audio_available": sorted(self.audio_files),
+                "audio_format": {n: ("wav" if p.endswith(".wav") else "mp3")
+                                 for n, p in self.audio_files.items()},
                 "composite": {"width": self.composer.width,
                               "height": self.composer.height},
             })
             return snap
 
     # --------------------------------------------------------- offline render
-    def render_offline(self, out_path, duration, fps=30):
+    def render_offline(self, out_dir, duration, fps=10):
         """Deterministic composite render: decode everything first, then
-        step T at fixed intervals.  Writes the composite mp4 plus a JSON
-        sidecar listing, per output frame, every stream's picked pts so
-        frame numbers can be audited against the burned-in counters."""
-        streams = [StreamConfig(**s) for s in self.config["streams"]]
+        step T at fixed intervals.  Writes one PNG per output frame plus a
+        JSON sidecar listing, per output frame, every stream's picked pts,
+        state and event tag so the common-event correspondence is auditable.
+        When ImageMagick is available an animated GIF summary is produced.
+        """
+        os.makedirs(out_dir, exist_ok=True)
+        streams = [self._resolve_stream(s) for s in self.config["streams"]]
         kernel = Kernel(
             streams,
             policy=self.kernel.policy,
@@ -237,50 +294,46 @@ class MultiCamApp:
         report = {"fps": fps, "duration": duration, "policy": kernel.policy,
                   "offsets": {n: kernel.streams[n].offset for n in names},
                   "frames": []}
-        proc = subprocess.Popen(
-            [FFMPEG, "-y", "-hide_banner", "-loglevel", "error",
-             "-f", "rawvideo", "-pix_fmt", "rgb24",
-             "-s", f"{composer.width}x{composer.height}", "-r", str(fps),
-             "-i", "pipe:0", "-c:v", "libx264", "-preset", "veryfast",
-             "-pix_fmt", "yuv420p", out_path],
-            stdin=subprocess.PIPE)
-        try:
-            for k in range(n_frames):
-                T = k / fps
-                picks = kernel.step(T)
-                cells = [build_cell_view(kernel, kernel.streams[n], picks[n])
-                         for n in names]
-                img = composer.render(cells)
-                proc.stdin.write(np.asarray(img).tobytes())
-                report["frames"].append({
-                    "k": k, "T": round(T, 6),
-                    "streams": {n: {
-                        "state": picks[n].state,
-                        "pts": picks[n].frame.pts if picks[n].frame else None,
-                        "pts_time": (round(picks[n].frame.time, 6)
-                                     if picks[n].frame else None),
-                        "arr_seq": (picks[n].frame.arr_seq
+        png_paths = []
+        gif_frames = []
+        for k in range(n_frames):
+            T = k / fps
+            picks = kernel.step(T)
+            cells = [build_cell_view(kernel, kernel.streams[n], picks[n])
+                     for n in names]
+            img = composer.render(cells)
+            path = os.path.join(out_dir, f"comp_{k:04d}.png")
+            write_png(path, composer.width, composer.height, img.buf)
+            png_paths.append(path)
+            gif_frames.append(img)
+            report["frames"].append({
+                "k": k, "T": round(T, 6),
+                "png": os.path.basename(path),
+                "streams": {n: {
+                    "state": picks[n].state,
+                    "pts": picks[n].frame.pts if picks[n].frame else None,
+                    "pts_time": (round(picks[n].frame.time, 6)
+                                 if picks[n].frame else None),
+                    "frame_index": (picks[n].frame.frame_index
                                     if picks[n].frame else None),
-                        "err_ms": (round(picks[n].err * 1000, 3)
-                                   if picks[n].frame else None),
-                    } for n in names},
-                })
-        finally:
-            proc.stdin.close()
-            rc = proc.wait()
-            kernel.stop()
-        if rc != 0:
-            raise RuntimeError(f"ffmpeg composite encode failed rc={rc}")
-        report["metrics"] = {s["name"]: s["metrics"] for s in kernel.snapshot()["streams"]}
-        sidecar = os.path.splitext(out_path)[0] + ".report.json"
-        with open(sidecar, "w") as fh:
+                    "event_id": (picks[n].frame.event_id
+                                 if picks[n].frame else None),
+                    "arr_seq": (picks[n].frame.arr_seq
+                                if picks[n].frame else None),
+                    "err_ms": (round(picks[n].err * 1000, 3)
+                               if picks[n].frame else None),
+                } for n in names},
+            })
+        kernel.stop()
+        report["metrics"] = {
+            s["name"]: s["metrics"] for s in kernel.snapshot()["streams"]}
+        sidecar = os.path.join(out_dir, "composite.report.json")
+        with open(sidecar, "w", encoding="utf-8") as fh:
             json.dump(report, fh, indent=1)
-        return {"out": out_path, "report": sidecar, "frames": n_frames,
-                "metrics": report["metrics"]}
-
-    @staticmethod
-    def _cell_view_for(kernel, name, pick):
-        return build_cell_view(kernel, kernel.streams[name], pick)
+        gif = os.path.join(out_dir, "composite.gif")
+        write_gif(gif, gif_frames, [int(1000 / fps)] * len(gif_frames))
+        return {"out_dir": out_dir, "report": sidecar, "frames": n_frames,
+                "gif": gif, "metrics": report["metrics"]}
 
 
 def build_cell_view(kernel, cfg, pick):
@@ -288,19 +341,29 @@ def build_cell_view(kernel, cfg, pick):
     dec = kernel.decoders[cfg.name]
     if f is not None:
         tb = f.time_base
-        line1 = (f"pts {f.time:.4f}s (tb {tb.numerator}/{tb.denominator}"
-                 f" #{f.pts})")
-        line2 = (f"tgt {pick.target:.4f}s err {pick.err * 1000:+.1f}ms "
-                 f"dec#{f.dec_seq} {f.pict} fps{(dec.fps or 0):g} "
-                 f"off{cfg.offset:+.2f}")
+        line1 = (f"PTS {f.time:.4f}S TB {tb.numerator}/{tb.denominator}"
+                 f" #{f.pts}")
+        line2 = (f"TGT {pick.target:.4f}S ERR {pick.err * 1000:+.1f}MS "
+                 f"DEC#{f.dec_seq} {f.pict} FPS{(dec.fps or 0):G} "
+                 f"OFF{cfg.offset:+.2f}")
+        if f.event_id:
+            line2 += f" {f.event_id}"
         image = f.image
     else:
-        line1 = f"tgt {pick.target:.4f}s  no frame"
-        line2 = f"fps{(dec.fps or 0):g} off{cfg.offset:+.2f} state={pick.state}"
+        line1 = f"TGT {pick.target:.4f}S NO FRAME"
+        line2 = f"FPS{(dec.fps or 0):G} OFF{cfg.offset:+.2f} STATE={pick.state}"
         image = None
     return CellView(cfg.name, pick.state, image, line1, line2)
 
 
 def load_config(path):
-    with open(path) as fh:
+    with open(path, encoding="utf-8") as fh:
         return json.load(fh)
+
+
+def load_pack(pack_dir):
+    """Load a self-made material pack through the strict project loader."""
+    from .package import load_project
+    cfg = load_project(pack_dir)
+    return MultiCamApp(cfg, workdir=os.path.join(pack_dir, "runtime"),
+                       pack_dir=pack_dir)

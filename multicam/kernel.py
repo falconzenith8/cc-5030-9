@@ -19,7 +19,7 @@ import time
 from collections import deque
 from dataclasses import dataclass, field
 
-from .media import StreamDecoder
+from .media import make_decoder
 
 OK = "OK"
 STALL = "STALLED"
@@ -27,6 +27,7 @@ ENDED = "ENDED"
 NOT_STARTED = "NOT_STARTED"
 ERROR = "ERROR"
 HELD = "HELD"
+GAP = "GAP"
 
 EPS = 1e-6
 
@@ -51,7 +52,7 @@ class Pick:
 class Kernel:
     def __init__(self, streams, policy="nearest", wait_budget=0.15,
                  on_stall="hold", continue_others_on_stall=True,
-                 decoder_factory=StreamDecoder, time_fn=time.monotonic,
+                 decoder_factory=make_decoder, time_fn=time.monotonic,
                  decoder_kwargs=None):
         assert policy in ("nearest", "hold")
         self.streams = {s.name: s for s in streams}
@@ -66,13 +67,14 @@ class Kernel:
         self._make_decoders(start_at=0.0)
         self.last = {}                      # name -> Pick
         self.metrics = {n: dict(picks=0, stalls=0, held=0, ended=0,
-                                not_started=0, errors=0, err_sum_ms=0.0,
-                                err_max_ms=0.0) for n in self.streams}
+                                not_started=0, errors=0, gaps=0,
+                                err_sum_ms=0.0, err_max_ms=0.0)
+                        for n in self.streams}
         self.events = deque(maxlen=300)
         self._lock = threading.RLock()
 
     # ------------------------------------------------------------ lifecycle
-    def _make_decoders(self, start_at, prod_t0=0.0):
+    def _make_decoders(self, start_at, prod_t0=0.0, extra_kw=None):
         old = getattr(self, "decoders", {})
         for d in old.values():
             d.stop()
@@ -83,6 +85,8 @@ class Kernel:
             kw.setdefault("start_at", start_at)
             kw.setdefault("avail_offset", cfg.offset)
             kw.setdefault("prod_t0", prod_t0)
+            if extra_kw:
+                kw.update(extra_kw)
             self.decoders[name] = self._factory(cfg.name, cfg.path, **kw)
 
     def start(self):
@@ -93,13 +97,18 @@ class Kernel:
         for d in self.decoders.values():
             d.stop()
 
-    def restart(self, start_at=0.0, prod_t0=0.0):
+    def restart(self, start_at=0.0, prod_t0=0.0, preload=False):
         with self._lock:
-            self._make_decoders(start_at, prod_t0)
+            self._make_decoders(start_at, prod_t0,
+                                extra_kw={"bulk": True} if preload else None)
             for d in self.decoders.values():
                 d.start()
+            if preload:
+                for d in self.decoders.values():
+                    d.preload()
             self.last = {}
-            self._log("info", f"all streams restarted at {start_at:.2f}s")
+            self._log("info", f"all streams restarted at {start_at:.2f}s"
+                              + (" (preloaded)" if preload else ""))
 
     # --------------------------------------------------------------- events
     def _log(self, level, msg):
@@ -122,9 +131,11 @@ class Kernel:
                                         prev.err if prev else 0.0)
                         self.metrics[n]["held"] += 1
             for n, p in picks.items():
-                if p.state == OK:  # committed picks only (HELD reverts don't count)
+                if p.state in (OK, GAP):  # committed picks (HELD reverts don't count)
                     m = self.metrics[n]
                     m["picks"] += 1
+                    if p.state == GAP:
+                        m["gaps"] += 1
                     err_ms = abs(p.err) * 1000.0
                     m["err_sum_ms"] += err_ms
                     m["err_max_ms"] = max(m["err_max_ms"], err_ms)
@@ -166,8 +177,10 @@ class Kernel:
         last = le[-1]
         if eof:
             stream_last = buf[-1]  # buf is in presentation order
-            dur = 1.0 / (dec.fps or 30.0)
-            cover = dur if self.policy == "hold" else dur / 2.0
+            cover = dec.nominal_span() if hasattr(dec, "nominal_span") \
+                else 1.0 / (dec.fps or 30.0)
+            if self.policy == "nearest":
+                cover /= 2.0
             if target > stream_last.time + cover:
                 return Pick(name, ENDED, target, stream_last,
                             stream_last.time - target)
@@ -177,6 +190,15 @@ class Kernel:
             chosen = last if beyond is None else min(
                 (last, beyond), key=lambda f: abs(f.time - target))
         err = chosen.time - target
+        # missing segment: the chosen frame is the last one recorded before
+        # a gap and the target lies inside that gap (or, for nearest, the
+        # frame after the gap is still farther away). State stays explicit —
+        # a camera in a gap must never look like a clean OK pick.
+        gap_after = getattr(chosen, "gap", False)
+        if gap_after and target > chosen.time:
+            nxt = next((f for f in buf if f.time > target + EPS), None)
+            if nxt is None or abs(chosen.time - target) <= abs(nxt.time - target):
+                return Pick(name, GAP, target, chosen, err)
         return Pick(name, OK, target, chosen, err)
 
     def _transition(self, name, pick, T):
@@ -225,6 +247,8 @@ class Kernel:
                     "arr_seq": f.arr_seq if f else None,
                     "dec_seq": f.dec_seq if f else None,
                     "pict": f.pict if f else None,
+                    "frame_index": f.frame_index if f else None,
+                    "event_id": getattr(f, "event_id", None) if f else None,
                     "frames_decoded": dec.frames_decoded,
                     "decode_delay": dec.decode_delay,
                     "has_audio": dec.has_audio,
@@ -232,6 +256,7 @@ class Kernel:
                     "metrics": {
                         "picks": m["picks"],
                         "stalls": m["stalls"],
+                        "gaps": m["gaps"],
                         "held": m["held"],
                         "ended_ticks": m["ended"],
                         "not_started_ticks": m["not_started"],

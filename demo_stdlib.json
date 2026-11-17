@@ -1,0 +1,17 @@
+{
+  "streams": [
+    {"name": "camA", "path": "media_legacy/camA", "offset": 0.0},
+    {"name": "camB", "path": "media_legacy/camB", "offset": 0.35},
+    {"name": "camC", "path": "media_legacy/camC", "offset": -0.8},
+    {"name": "camD", "path": "media_legacy/camD", "offset": 1.2}
+  ],
+  "policy": "nearest",
+  "reference": "virtual",
+  "reference_options": ["virtual", "camA", "camB", "camC", "camD"],
+  "audio_source": "camA",
+  "wait_budget_ms": 150,
+  "speed": 1.0,
+  "on_stall": "hold",
+  "continue_others_on_stall": true,
+  "simulate_decode_delay": {}
+}

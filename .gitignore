@@ -26,3 +26,6 @@ __pycache__/
 
 # Recreated automatically from the source video tracks
 /out/audio_cache/
+
+# Runtime audio cache copied out of camera packages when a panel runs
+**/runtime/
