@@ -1,0 +1,56 @@
+{
+ "schema": "multicam-preview-project/2",
+ "name": "sync-demo",
+ "media_root": "media",
+ "ground_truth": "ground_truth.json",
+ "timeline_duration_s": 14.0,
+ "streams": [
+  {
+   "name": "camA",
+   "path": "media/camA.mp4",
+   "offset": 0.0,
+   "gaps": []
+  },
+  {
+   "name": "camB",
+   "path": "media/camB.mp4",
+   "offset": 0.8,
+   "gaps": [
+    [
+     5.9,
+     7.4
+    ]
+   ]
+  },
+  {
+   "name": "camC",
+   "path": "media/camC.mp4",
+   "offset": -1.2,
+   "gaps": [
+    [
+     3.1,
+     4.6
+    ],
+    [
+     9.2,
+     10.6
+    ]
+   ]
+  },
+  {
+   "name": "camD",
+   "path": "media/camD.mp4",
+   "offset": 1.5,
+   "gaps": []
+  }
+ ],
+ "policy": "nearest",
+ "reference": "virtual",
+ "audio_source": "camA",
+ "wait_budget_ms": 150,
+ "speed": 1.0,
+ "on_stall": "hold",
+ "continue_others_on_stall": true,
+ "gap_error_ms": 120.0,
+ "simulate_decode_delay": {}
+}

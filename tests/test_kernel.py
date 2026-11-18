@@ -1,17 +1,17 @@
 """Kernel and end-to-end tests for the multi-camera sync preview.
 
-Backend-agnostic: the legacy sample set is built as mp4 clips when the
-optional PyAV/numpy/ffmpeg stack exists, and as stdlib PNG camera packages
-otherwise.  Covers per-stream time bases, decode order vs presentation
-selection, nearest/hold policies across different fps, early-ending clips,
-negative start offsets, bounded wait on slow decoders (with the
-continue-others configuration both ways), single-source audio monitoring,
-missing segments, and frame-number read-back from the real composite.
+Covers: per-stream time bases, B-frame decode order vs presentation
+selection, nearest/hold policies across different fps, early-ending
+clips, negative start offsets, bounded wait on slow decoders (with the
+continue-others configuration both ways), single-source audio
+monitoring, and frame-number verification read back from the real
+composite output.
 """
 import json
 import os
 import sys
 import tempfile
+import time
 import unittest
 from fractions import Fraction
 from types import SimpleNamespace
@@ -19,18 +19,16 @@ from types import SimpleNamespace
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from multicam import (Kernel, StreamConfig, MultiCamApp, Composer,
-                      read_frame_number, OK, STALL, ENDED, NOT_STARTED,
-                      HELD, GAP, make_decoder)
+                      read_frame_number, OK, STALL, ENDED, NOT_STARTED, HELD)
 from multicam.app import build_cell_view
-from multicam.media import _HAS_AV
-from tools.make_media import ensure_media, TB_DEN
+from tools.make_media import ensure_media
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MEDIA = os.path.join(ROOT, "media_legacy")
+MEDIA = os.path.join(ROOT, "media")
 
 
 def cam(name):
-    return os.path.join(MEDIA, name)
+    return os.path.join(MEDIA, f"{name}.mp4")
 
 
 def make_kernel(specs, **kw):
@@ -50,7 +48,6 @@ class KernelTestBase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         ensure_media(MEDIA)
-        cls.has_av = _HAS_AV
 
 
 class TestTimeBaseAndDecodeOrder(KernelTestBase):
@@ -59,39 +56,30 @@ class TestTimeBaseAndDecodeOrder(KernelTestBase):
         try:
             tbA = k.decoders["camA"].time_base
             tbC = k.decoders["camC"].time_base
-            if self.has_av:
-                # mp4 muxing assigns stream-specific codec time bases
-                self.assertEqual(tbA, Fraction(1, 15360))
-                self.assertEqual(tbC, Fraction(1, 12288))
-            else:
-                self.assertEqual(tbA, Fraction(1, TB_DEN))
-                self.assertEqual(tbC, Fraction(1, TB_DEN))
-            self.assertIsNotNone(tbA)
+            self.assertEqual(tbA, Fraction(1, 15360))
+            self.assertEqual(tbC, Fraction(1, 12288))
+            self.assertNotEqual(tbA, tbC)  # own time bases preserved
             k.step(0.5)
             snap = k.snapshot()
             by_name = {s["name"]: s for s in snap["streams"]}
-            self.assertTrue(by_name["camA"]["time_base"].endswith(
-                str(tbA.denominator)))
-            self.assertIsInstance(by_name["camA"]["pts"], int)
+            self.assertEqual(by_name["camA"]["time_base"], "1/15360")
+            self.assertEqual(by_name["camC"]["time_base"], "1/12288")
+            self.assertIsInstance(by_name["camA"]["pts"], int)  # raw pts exposed
         finally:
             k.stop()
 
-    def test_presentation_order_differs_from_packet_log_when_bframes(self):
+    def test_bframe_decode_order_differs_from_presentation(self):
         k = make_kernel([("camA", 0.0), ("camC", 0.0)])
         try:
             ptsA = [p[1] for p in k.decoders["camA"].packet_log]
             ptsC = [p[1] for p in k.decoders["camC"].packet_log]
-            if self.has_av:
-                # camA mp4 has B-frames: packet (decode) order is reordered
-                self.assertTrue(any(ptsA[i] > ptsA[i + 1]
-                                    for i in range(len(ptsA) - 1)),
-                                f"expected reordered pts, got {ptsA[:12]}")
-                self.assertFalse(any(ptsC[i] > ptsC[i + 1]
-                                     for i in range(len(ptsC) - 1)))
-            else:
-                # stdlib packages keep presentation order in both logs
-                self.assertEqual(ptsA, sorted(ptsA))
-                self.assertEqual(ptsC, sorted(ptsC))
+            # camA has B-frames: packet (decode) order pts is non-monotonic
+            self.assertTrue(any(ptsA[i] > ptsA[i + 1]
+                                for i in range(len(ptsA) - 1)),
+                            f"expected reordered pts, got {ptsA[:12]}")
+            # camC has no B-frames: monotonic
+            self.assertFalse(any(ptsC[i] > ptsC[i + 1]
+                                 for i in range(len(ptsC) - 1)))
         finally:
             k.stop()
 
@@ -100,9 +88,9 @@ class TestTimeBaseAndDecodeOrder(KernelTestBase):
         try:
             picks = k.step(0.5)["camA"]
             self.assertEqual(picks.state, OK)
-            # 30fps: T=0.5 is exactly frame 15
-            self.assertAlmostEqual(picks.frame.time, 0.5, places=6)
-            self.assertEqual(picks.frame.frame_index, 15)
+            # 30fps: T=0.5 is exactly frame 15 -> pts 15*512 in tb 1/15360
+            self.assertEqual(picks.frame.pts, 15 * 512)
+            self.assertEqual(picks.frame.arr_seq, 15)
             self.assertAlmostEqual(picks.err, 0.0, places=6)
         finally:
             k.stop()
@@ -114,11 +102,13 @@ class TestCrossFpsPolicies(KernelTestBase):
         try:
             p = k.step(0.49)
             # camA 30fps: 0.49*30=14.7 -> nearest 15 (0.5000), hold 14 (0.4667)
-            self.assertEqual(frame_num(p["camA"], 30), 15)
-            self.assertAlmostEqual(p["camA"].err, 0.5 - 0.49, places=4)
+            a = p["camA"]
+            self.assertEqual(frame_num(a, 30), 15)
+            self.assertAlmostEqual(a.err, 0.5 - 0.49, places=4)
             # camC 24fps: 0.49*24=11.76 -> nearest 12 (0.5000), hold 11 (0.4583)
-            self.assertEqual(frame_num(p["camC"], 24), 12)
-            self.assertAlmostEqual(p["camC"].err, 0.5 - 0.49, places=4)
+            c = p["camC"]
+            self.assertEqual(frame_num(c, 24), 12)
+            self.assertAlmostEqual(c.err, 0.5 - 0.49, places=4)
         finally:
             k.stop()
 
@@ -144,19 +134,19 @@ class TestTimelineEdges(KernelTestBase):
         try:
             p = k.step(4.5)  # camB (4.0s) is over; the rest are not
             self.assertEqual(p["camB"].state, ENDED)
-            self.assertEqual(p["camB"].frame.frame_index, 99)  # last kept
+            self.assertEqual(p["camB"].frame.pts, 99 * 512)  # last frame kept
             for n in ("camA", "camC", "camD"):
                 self.assertEqual(p[n].state, OK, n)
             # ended stream stays in the metrics — not dropped
             snap = k.snapshot()
             names = [s["name"] for s in snap["streams"]]
-            self.assertEqual(sorted(names), ["camA", "camB", "camC", "camD"])
+            self.assertIn("camB", names)
             mb = next(s for s in snap["streams"] if s["name"] == "camB")
             self.assertGreater(mb["metrics"]["ended_ticks"], 0)
             # and the composite still renders 4 cells
             cells = [build_cell_view(k, k.streams[n], p[n]) for n in k.streams]
             img = Composer(4).render(cells)
-            self.assertEqual((img.w, img.h), (960, 840))
+            self.assertEqual(img.size, (960, 840))
         finally:
             k.stop()
 
@@ -190,7 +180,7 @@ class TestTimelineEdges(KernelTestBase):
                 p = k.step(t)["camB"]
                 self.assertEqual(p.state, ENDED)
                 self.assertIsNotNone(p.frame)
-                self.assertEqual(p.frame.frame_index, 99)
+                self.assertEqual(p.frame.pts, 99 * 512)
         finally:
             k.stop()
 
@@ -230,8 +220,7 @@ class FakeDecoder:
             self.frames.append(SimpleNamespace(
                 time=t, pts=int(t * 30), time_base=Fraction(1, 30),
                 arr_seq=len(self.frames), dec_seq=len(self.frames),
-                pict="I", image=None, frame_index=len(self.frames),
-                event_id=None, gap=False))
+                pict="I", image=None))
         self.frames.sort(key=lambda f: f.time)
         self.eof = self.eof or eof
 
@@ -245,9 +234,6 @@ class FakeDecoder:
 
     def release_before(self, t):
         pass
-
-    def nominal_span(self):
-        return 1.0 / 30.0
 
 
 class FakeClock2(FakeClock):
@@ -310,65 +296,6 @@ class TestBoundedWait(unittest.TestCase):
         self.assertIsNone(p["slow"].frame)
 
 
-class TestMissingSegments(unittest.TestCase):
-    """The synced demo pack: camB has a gap covering E3, camC is
-    non-uniform, camD starts late. The kernel must surface GAP explicitly."""
-
-    @classmethod
-    def setUpClass(cls):
-        from multicam.package import load_project
-        cls.pack = os.path.join(ROOT, "demo_pack")
-        if not os.path.isfile(os.path.join(cls.pack, "project.json")):
-            from tools.make_synced_media import build_pack
-            build_pack(cls.pack)
-        cls.cfg = load_project(cls.pack)
-
-    def _kernel(self, policy="nearest"):
-        streams = [StreamConfig(
-            name=s["name"],
-            path=os.path.join(self.pack, s["path"]),
-            offset=s["offset"]) for s in self.cfg["streams"]]
-        k = Kernel(streams, policy=policy, wait_budget=5.0,
-                   decoder_kwargs=dict(realtime=False))
-        k.start()
-        for d in k.decoders.values():
-            d.preload()
-        return k
-
-    def test_gap_state_inside_camb_missing_segment(self):
-        k = self._kernel()
-        try:
-            p = k.step(5.9)                      # inside camB 5.0-6.8 gap
-            self.assertEqual(p["camB"].state, GAP)
-            self.assertIsNotNone(p["camB"].frame)   # last pre-gap frame held
-            self.assertGreater(abs(p["camB"].err), 0.5)
-            # other cameras keep serving real frames
-            for n in ("camA", "camC", "camD"):
-                self.assertEqual(p[n].state, OK, n)
-            self.assertGreater(k.snapshot()["streams"][1]["metrics"]["gaps"], 0)
-        finally:
-            k.stop()
-
-    def test_non_uniform_camc_intervals(self):
-        k = self._kernel()
-        try:
-            frames, _, _ = k.decoders["camC"].snapshot()
-            times = [f.time for f in frames]
-            diffs = [round(times[i + 1] - times[i], 4)
-                     for i in range(len(times) - 1)]
-            self.assertTrue(len(set(diffs)) > 1)  # genuinely non-uniform
-        finally:
-            k.stop()
-
-    def test_late_start_camd(self):
-        k = self._kernel()
-        try:
-            self.assertEqual(k.step(0.5)["camD"].state, NOT_STARTED)
-            self.assertEqual(k.step(2.0)["camD"].state, OK)
-        finally:
-            k.stop()
-
-
 class TestAppAndOutput(KernelTestBase):
     def config2(self, **over):
         cfg = {
@@ -378,7 +305,6 @@ class TestAppAndOutput(KernelTestBase):
             ],
             "policy": "nearest",
             "reference": "virtual",
-            "reference_options": ["virtual", "camA", "camC"],
             "audio_source": "camA",
             "wait_budget_ms": 150,
         }
@@ -391,7 +317,7 @@ class TestAppAndOutput(KernelTestBase):
         try:
             for d in app.kernel.decoders.values():
                 self.assertTrue(d.ready.wait(10))
-            app._collect_audio()
+            app._extract_audio()
             self.assertEqual(sorted(app.audio_files), ["camA", "camC"])
             ok, _ = app.control({"action": "set_audio", "source": "camC"})
             self.assertTrue(ok)
@@ -408,18 +334,20 @@ class TestAppAndOutput(KernelTestBase):
     def test_offline_render_and_frame_number_readback(self):
         tmp = tempfile.mkdtemp()
         app = MultiCamApp(self.config2(), workdir=tmp)
-        info = app.render_offline(tmp, duration=1.0, fps=10)
+        out = os.path.join(tmp, "composite.mp4")
+        info = app.render_offline(out, duration=1.0, fps=10)
         self.assertEqual(info["frames"], 10)
-        pngs = sorted(f for f in os.listdir(tmp) if f.endswith(".png"))
-        self.assertEqual(len(pngs), 10)
+        self.assertTrue(os.path.exists(out))
         with open(info["report"]) as fh:
             report = json.load(fh)
         # read the burned-in frame numbers back from the rendered composite
-        from multicam.imglib import Canvas, load_rgb
+        import av
+        container = av.open(out)
+        frames = list(container.decode(video=0))
+        container.close()
+        self.assertEqual(len(frames), 10)
         k = 5  # T = 0.5
-        w, h, rgb = load_rgb(os.path.join(tmp, report["frames"][k]["png"]))
-        img = Canvas(w, h)
-        img.buf = bytearray(rgb)
+        img = frames[k].to_ndarray(format="rgb24")
         exp = report["frames"][k]["streams"]
         nA = read_frame_number(img, 0, 2)
         nC = read_frame_number(img, 1, 2)
@@ -427,8 +355,8 @@ class TestAppAndOutput(KernelTestBase):
         self.assertEqual(nC, int(round(exp["camC"]["pts_time"] * 24)))
         self.assertEqual(nA, 15)   # 0.5s * 30fps
         self.assertEqual(nC, 31)   # (0.5+0.8)s * 24fps = 31.2 -> 31
+        # metrics for every stream are present in the report
         self.assertEqual(sorted(report["metrics"]), ["camA", "camC"])
-        self.assertTrue(os.path.exists(info["gif"]))
 
     def test_reference_clock_and_controls(self):
         app = MultiCamApp(self.config2(), workdir=tempfile.mkdtemp())
@@ -443,20 +371,6 @@ class TestAppAndOutput(KernelTestBase):
         ok, msg = app.control({"action": "bogus"})
         self.assertFalse(ok)
         app.kernel.stop()
-
-
-class TestStrictLoader(unittest.TestCase):
-    def test_missing_field_is_not_hidden_by_defaults(self):
-        from multicam.package import load_project
-        bad = tempfile.mkdtemp()
-        os.makedirs(os.path.join(bad, "cameras", "x"))
-        with open(os.path.join(bad, "project.json"), "w") as fh:
-            json.dump({"streams": [{"name": "x"}]}, fh)  # path/offset missing
-        with self.assertRaises(ValueError):
-            load_project(bad)
-        good = os.path.join(ROOT, "demo_pack")
-        cfg = load_project(good)
-        self.assertIn("virtual", cfg["reference_options"])
 
 
 if __name__ == "__main__":

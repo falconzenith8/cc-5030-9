@@ -19,7 +19,7 @@ import time
 from collections import deque
 from dataclasses import dataclass, field
 
-from .media import make_decoder
+from .media import StreamDecoder
 
 OK = "OK"
 STALL = "STALLED"
@@ -27,7 +27,7 @@ ENDED = "ENDED"
 NOT_STARTED = "NOT_STARTED"
 ERROR = "ERROR"
 HELD = "HELD"
-GAP = "GAP"
+GAP = "GAP"          # camera has no frame covering this local time (missing segment)
 
 EPS = 1e-6
 
@@ -38,6 +38,11 @@ class StreamConfig:
     path: str
     offset: float = 0.0          # seconds; local_time = T - offset (may be negative)
     decode_delay: float = 0.0    # simulated slow decoder, seconds per frame
+    # known production-time intervals with no frames for this camera;
+    # a pick whose target lands inside one is reported GAP once the
+    # distance to the nearest available frame exceeds gap_error_s.
+    gaps: tuple = ()
+    gap_error_s: object = None   # per-stream override of kernel threshold
 
 
 @dataclass
@@ -52,7 +57,8 @@ class Pick:
 class Kernel:
     def __init__(self, streams, policy="nearest", wait_budget=0.15,
                  on_stall="hold", continue_others_on_stall=True,
-                 decoder_factory=make_decoder, time_fn=time.monotonic,
+                 gap_error_s=None,
+                 decoder_factory=StreamDecoder, time_fn=time.monotonic,
                  decoder_kwargs=None):
         assert policy in ("nearest", "hold")
         self.streams = {s.name: s for s in streams}
@@ -60,6 +66,9 @@ class Kernel:
         self.wait_budget = wait_budget
         self.on_stall = on_stall            # 'hold' shows last frame, 'blank' shows missing
         self.continue_others_on_stall = continue_others_on_stall
+        # picks farther than this from any available frame while inside a
+        # declared gap are surfaced as GAP; None keeps the legacy behaviour
+        self.gap_error_s = gap_error_s
         self._time = time_fn
         self._decoder_kwargs = decoder_kwargs or {}
         self._factory = decoder_factory
@@ -74,7 +83,7 @@ class Kernel:
         self._lock = threading.RLock()
 
     # ------------------------------------------------------------ lifecycle
-    def _make_decoders(self, start_at, prod_t0=0.0, extra_kw=None):
+    def _make_decoders(self, start_at, prod_t0=0.0):
         old = getattr(self, "decoders", {})
         for d in old.values():
             d.stop()
@@ -85,8 +94,6 @@ class Kernel:
             kw.setdefault("start_at", start_at)
             kw.setdefault("avail_offset", cfg.offset)
             kw.setdefault("prod_t0", prod_t0)
-            if extra_kw:
-                kw.update(extra_kw)
             self.decoders[name] = self._factory(cfg.name, cfg.path, **kw)
 
     def start(self):
@@ -97,18 +104,13 @@ class Kernel:
         for d in self.decoders.values():
             d.stop()
 
-    def restart(self, start_at=0.0, prod_t0=0.0, preload=False):
+    def restart(self, start_at=0.0, prod_t0=0.0):
         with self._lock:
-            self._make_decoders(start_at, prod_t0,
-                                extra_kw={"bulk": True} if preload else None)
+            self._make_decoders(start_at, prod_t0)
             for d in self.decoders.values():
                 d.start()
-            if preload:
-                for d in self.decoders.values():
-                    d.preload()
             self.last = {}
-            self._log("info", f"all streams restarted at {start_at:.2f}s"
-                              + (" (preloaded)" if preload else ""))
+            self._log("info", f"all streams restarted at {start_at:.2f}s")
 
     # --------------------------------------------------------------- events
     def _log(self, level, msg):
@@ -116,11 +118,19 @@ class Kernel:
 
     # -------------------------------------------------------------- picking
     def step(self, T):
-        """Advance every stream to production time T.  Returns {name: Pick}."""
+        """Advance every stream to production time T.  Returns {name: Pick}.
+
+        The whole tick shares one bounded-wait budget so several stalled
+        streams cannot each sleep a full budget while holding the loop
+        lock: during a catch-up the tick returns quickly with STALLED
+        picks and is retried on the next tick instead of blocking the
+        composer for hundreds of milliseconds.
+        """
         with self._lock:
+            tick_deadline = self._time() + self.wait_budget
             picks = {}
             for name in self.streams:
-                picks[name] = self._pick_one(name, T)
+                picks[name] = self._pick_one(name, T, tick_deadline)
             stalled = [n for n, p in picks.items() if p.state == STALL]
             if stalled and not self.continue_others_on_stall:
                 for n, p in picks.items():
@@ -131,7 +141,7 @@ class Kernel:
                                         prev.err if prev else 0.0)
                         self.metrics[n]["held"] += 1
             for n, p in picks.items():
-                if p.state in (OK, GAP):  # committed picks (HELD reverts don't count)
+                if p.state in (OK, GAP):  # committed picks only (HELD reverts don't count)
                     m = self.metrics[n]
                     m["picks"] += 1
                     if p.state == GAP:
@@ -143,14 +153,13 @@ class Kernel:
             self.last = picks
             return picks
 
-    def _pick_one(self, name, T):
+    def _pick_one(self, name, T, tick_deadline):
         cfg = self.streams[name]
         dec = self.decoders[name]
         target = T - cfg.offset
         if target < 0:
             # before this stream's first possible frame; no need to wait
             return Pick(name, NOT_STARTED, target)
-        deadline = self._time() + self.wait_budget
         while True:
             buf, eof, err = dec.snapshot()
             if err is not None:
@@ -160,7 +169,7 @@ class Kernel:
             beyond = next((f for f in buf if f.time > target + EPS), None)
             if beyond is not None or eof:
                 break
-            remaining = deadline - self._time()
+            remaining = min(tick_deadline - self._time(), self.wait_budget)
             if remaining <= 0:
                 self.metrics[name]["stalls"] += 1
                 prev = self.last.get(name)
@@ -173,14 +182,25 @@ class Kernel:
                 remaining)
         # selection is now decidable
         if not le:
+            # No frame at or before target.  If a later frame is already
+            # available this is the start of a missing segment: pick that
+            # frame (nearest policy) rather than calling it NOT_STARTED, so
+            # a gap keeps showing real picture instead of a blank cell.
+            if beyond is not None:
+                err = beyond.time - target
+                state = OK
+                if self._inside_gap(cfg, T) and self.gap_error_s is not None:
+                    limit = (cfg.gap_error_s if cfg.gap_error_s is not None
+                             else self.gap_error_s)
+                    if abs(err) > limit:
+                        state = GAP
+                return Pick(name, state, target, beyond, err)
             return Pick(name, NOT_STARTED, target)
         last = le[-1]
         if eof:
             stream_last = buf[-1]  # buf is in presentation order
-            cover = dec.nominal_span() if hasattr(dec, "nominal_span") \
-                else 1.0 / (dec.fps or 30.0)
-            if self.policy == "nearest":
-                cover /= 2.0
+            dur = 1.0 / (dec.fps or 30.0)
+            cover = dur if self.policy == "hold" else dur / 2.0
             if target > stream_last.time + cover:
                 return Pick(name, ENDED, target, stream_last,
                             stream_last.time - target)
@@ -190,16 +210,19 @@ class Kernel:
             chosen = last if beyond is None else min(
                 (last, beyond), key=lambda f: abs(f.time - target))
         err = chosen.time - target
-        # missing segment: the chosen frame is the last one recorded before
-        # a gap and the target lies inside that gap (or, for nearest, the
-        # frame after the gap is still farther away). State stays explicit —
-        # a camera in a gap must never look like a clean OK pick.
-        gap_after = getattr(chosen, "gap", False)
-        if gap_after and target > chosen.time:
-            nxt = next((f for f in buf if f.time > target + EPS), None)
-            if nxt is None or abs(chosen.time - target) <= abs(nxt.time - target):
-                return Pick(name, GAP, target, chosen, err)
-        return Pick(name, OK, target, chosen, err)
+        state = OK
+        if self._inside_gap(cfg, T) and self.gap_error_s is not None:
+            limit = (cfg.gap_error_s if cfg.gap_error_s is not None
+                     else self.gap_error_s)
+            if abs(err) > limit:
+                state = GAP
+        return Pick(name, state, target, chosen, err)
+
+    @staticmethod
+    def _inside_gap(cfg, production_T):
+        # gaps are declared on the production timeline T
+        return any(lo - EPS <= production_T <= hi + EPS
+                   for lo, hi in cfg.gaps)
 
     def _transition(self, name, pick, T):
         m = self.metrics[name]
@@ -247,20 +270,20 @@ class Kernel:
                     "arr_seq": f.arr_seq if f else None,
                     "dec_seq": f.dec_seq if f else None,
                     "pict": f.pict if f else None,
-                    "frame_index": f.frame_index if f else None,
-                    "event_id": getattr(f, "event_id", None) if f else None,
                     "frames_decoded": dec.frames_decoded,
                     "decode_delay": dec.decode_delay,
                     "has_audio": dec.has_audio,
+                    "gaps_declared": [list(g) for g in cfg.gaps],
+                    "in_gap": self._inside_gap(cfg, p.target + cfg.offset) if p else False,
                     "packet_log_head": dec.packet_log[:16],
                     "metrics": {
                         "picks": m["picks"],
                         "stalls": m["stalls"],
-                        "gaps": m["gaps"],
                         "held": m["held"],
                         "ended_ticks": m["ended"],
                         "not_started_ticks": m["not_started"],
                         "errors": m["errors"],
+                        "gaps": m["gaps"],
                         "mean_err_ms": (m["err_sum_ms"] / m["picks"]
                                         if m["picks"] else 0.0),
                         "max_err_ms": m["err_max_ms"],

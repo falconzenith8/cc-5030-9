@@ -1,35 +1,23 @@
-"""Per-stream decoding with two swappable backends.
+"""Per-stream decoding.
 
-* PackageDecoder — pure stdlib, reads the self-made PNG frame packages
-  (including non-uniform frame timing and missing segments).
-* StreamDecoder — PyAV backend for mp4 sources, kept for the original
-  sample set.  Importing PyAV is optional: the package backend works in
-  environments where no video library is installed.
-
-Both backends expose the identical surface (snapshot / wait_for /
-preload / release_before, FrameItem fields) so the kernel never needs to
-know which one produced a frame.
+Every stream is decoded on its own thread and keeps its own time base
+(raw pts + time_base) and its own decode order (packet arrival order is
+logged; frames are tagged with the decode-pass sequence number that
+surfaced them).  Nothing here assumes streams share a clock: alignment
+is the kernel's job and is done purely on presentation timestamps.
 """
-import os
 import threading
 import time
 from collections import deque
 
-from .package import PackageDecoder
-
-try:  # optional dependency — only needed for legacy mp4 samples
-    import av
-    _HAS_AV = True
-except ImportError:  # pragma: no cover - exercised in the no-av CI image
-    av = None
-    _HAS_AV = False
+import av
 
 PICT_NAMES = {0: "?", 1: "I", 2: "P", 3: "B", 4: "S"}
 
 
 class FrameItem:
     __slots__ = ("arr_seq", "dec_seq", "pts", "time_base", "time", "pict",
-                 "key_frame", "image", "frame_index", "event_id", "gap")
+                 "key_frame", "image")
 
     def __init__(self, arr_seq, dec_seq, pts, time_base, pict, key_frame, image):
         self.arr_seq = arr_seq          # arrival order from decoder (presentation rank)
@@ -40,26 +28,18 @@ class FrameItem:
         self.pict = pict
         self.key_frame = key_frame
         self.image = image              # HxWx3 uint8 rgb24
-        self.frame_index = None
-        self.event_id = None
-        self.gap = False
 
 
 class StreamDecoder(threading.Thread):
-    """Decode one video file (PyAV backend).
-
-    Frames become available in presentation order; the packet-level decode
-    order is recorded in ``packet_log`` so B-frame reordering is observable.
-    With ``realtime=True`` frame availability is paced to the presentation
-    clock, which makes bounded-wait meaningful in the live panel.
-    """
+    """Decode one video file.  Frames become available in presentation
+    order (the decoder reorders B-frames internally); the packet-level
+    decode order is recorded in ``packet_log`` so the reordering is
+    observable.  With ``realtime=True`` frame availability is paced to
+    the presentation clock, which is what makes bounded-wait meaningful
+    in the live panel."""
 
     def __init__(self, name, path, realtime=False, speed_getter=lambda: 1.0,
                  decode_delay=0.0, start_at=0.0, avail_offset=0.0, prod_t0=0.0):
-        if not _HAS_AV:
-            raise RuntimeError(
-                "mp4 sources need the optional 'av' (PyAV) dependency; "
-                "use a self-made .mcpack camera package for the stdlib backend")
         super().__init__(name=f"dec-{name}", daemon=True)
         self.name = name
         self.path = path
@@ -104,8 +84,17 @@ class StreamDecoder(threading.Thread):
             self.fps = float(vs.average_rate or vs.base_rate)
             self.has_audio = len(container.streams.audio) > 0
             self.ready.set()
-            t0 = time.monotonic()
+            wall0 = time.monotonic()
             arr = 0
+            # Catch-up state machine.  Normally frames are paced to their
+            # due time.  If the decoder ever falls behind by more than
+            # CATCH_BEHIND_S it enters catch-up and emits frames with no
+            # sleeping until the wall clock is within CATCH_NEAR_S of the
+            # due time, then resumes pacing.  This is what makes a seek
+            # (especially across a camera gap) converge quickly instead of
+            # playing the whole backlog at realtime speed and staying
+            # STALLED.
+            catching_up = True
             for pkt_idx, pkt in enumerate(container.demux(vs)):
                 if self._stop_requested:
                     break
@@ -124,17 +113,21 @@ class StreamDecoder(threading.Thread):
                         key_frame=bool(frame.key_frame),
                         image=frame.to_ndarray(format="rgb24"),
                     )
-                    item.frame_index = arr
                     arr += 1
                     if item.time < self.start_at:
                         continue  # seek: decode but discard earlier frames
                     if self.realtime:
                         speed = max(self._speed_getter(), 1e-6)
-                        due = t0 + (item.time + self.avail_offset
-                                    - self.prod_t0) / speed
-                        delay = due - time.monotonic()
-                        if delay > 0:
-                            time.sleep(min(delay, 5.0))
+                        due = wall0 + (item.time + self.avail_offset
+                                       - self.prod_t0) / speed
+                        now = time.monotonic()
+                        lag = due - now
+                        if lag > 0.3:                 # far behind -> catch up
+                            catching_up = True
+                        elif lag < 0.05:              # clock caught up -> pace
+                            catching_up = False
+                        if not catching_up and lag > 0:
+                            time.sleep(min(lag, 5.0))
                     if self.decode_delay > 0:
                         time.sleep(self.decode_delay)
                     with self._cond:
@@ -162,9 +155,9 @@ class StreamDecoder(threading.Thread):
 
     def release_before(self, t):
         """Drop buffered frames older than t (memory bound; kernel keeps
-        the frames it currently displays).  Always keeps the newest frame:
-        after EOF that last frame is what lets the kernel keep reporting
-        ENDED instead of losing the stream."""
+        the frames it currently displays).  Always keeps the newest
+        frame: after EOF that last frame is what lets the kernel keep
+        reporting ENDED instead of losing the stream."""
         with self._cond:
             while len(self._buf) > 1 and self._buf[0].time < t:
                 self._buf.popleft()
@@ -182,19 +175,3 @@ class StreamDecoder(threading.Thread):
         self.join(timeout)
         if self.is_alive():
             raise TimeoutError(f"preload of {self.path} timed out")
-
-    def nominal_span(self):
-        return 1.0 / (self.fps or 30.0)
-
-
-def make_decoder(name, path, **kwargs):
-    """Choose the backend from the source path.
-
-    A directory containing ``camera.json`` is a self-made package and
-    always uses the stdlib backend; anything else uses the PyAV backend.
-    The ``bulk`` flag only exists on the package decoder.
-    """
-    if os.path.isdir(path) and os.path.isfile(os.path.join(path, "camera.json")):
-        return PackageDecoder(name, path, **kwargs)
-    kwargs.pop("bulk", None)
-    return StreamDecoder(name, path, **kwargs)

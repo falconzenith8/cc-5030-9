@@ -1,0 +1,4840 @@
+{
+ "fps": 10,
+ "duration": 14.0,
+ "policy": "nearest",
+ "gap_error_ms": 120.0,
+ "offsets": {
+  "camA": 0.0,
+  "camB": 0.8,
+  "camC": -1.2,
+  "camD": 1.5
+ },
+ "declared_gaps": {
+  "camA": [],
+  "camB": [
+   [
+    5.9,
+    7.4
+   ]
+  ],
+  "camC": [
+   [
+    3.1,
+    4.6
+   ],
+   [
+    9.2,
+    10.6
+   ]
+  ],
+  "camD": []
+ },
+ "frames": [
+  {
+   "k": 0,
+   "T": 0.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 0,
+     "pts_time": 0.0,
+     "arr_seq": 0,
+     "err_ms": 0.0
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 18551,
+     "pts_time": 1.207747,
+     "arr_seq": 29,
+     "err_ms": 7.747
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 1,
+   "T": 0.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 1497,
+     "pts_time": 0.097461,
+     "arr_seq": 3,
+     "err_ms": -2.539
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 19985,
+     "pts_time": 1.301107,
+     "arr_seq": 31,
+     "err_ms": 1.107
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 2,
+   "T": 0.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 2933,
+     "pts_time": 0.190951,
+     "arr_seq": 6,
+     "err_ms": -9.049
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 21349,
+     "pts_time": 1.389909,
+     "arr_seq": 33,
+     "err_ms": -10.091
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 3,
+   "T": 0.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 4363,
+     "pts_time": 0.284049,
+     "arr_seq": 9,
+     "err_ms": -15.951
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 23194,
+     "pts_time": 1.510026,
+     "arr_seq": 36,
+     "err_ms": 10.026
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 4,
+   "T": 0.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 6030,
+     "pts_time": 0.392578,
+     "arr_seq": 12,
+     "err_ms": -7.422
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 24309,
+     "pts_time": 1.582617,
+     "arr_seq": 38,
+     "err_ms": -17.383
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 5,
+   "T": 0.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 7555,
+     "pts_time": 0.491862,
+     "arr_seq": 15,
+     "err_ms": -8.138
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 26282,
+     "pts_time": 1.711068,
+     "arr_seq": 41,
+     "err_ms": 11.068
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 6,
+   "T": 0.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 9140,
+     "pts_time": 0.595052,
+     "arr_seq": 18,
+     "err_ms": -4.948
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 27611,
+     "pts_time": 1.797591,
+     "arr_seq": 43,
+     "err_ms": -2.409
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 7,
+   "T": 0.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 10593,
+     "pts_time": 0.689648,
+     "arr_seq": 21,
+     "err_ms": -10.352
+    },
+    "camB": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 29332,
+     "pts_time": 1.909635,
+     "arr_seq": 46,
+     "err_ms": 9.635
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 8,
+   "T": 0.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 12155,
+     "pts_time": 0.791341,
+     "arr_seq": 24,
+     "err_ms": -8.659
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 0,
+     "pts_time": 0.0,
+     "arr_seq": 0,
+     "err_ms": 0.0
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 31016,
+     "pts_time": 2.019271,
+     "arr_seq": 49,
+     "err_ms": 19.271
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 9,
+   "T": 0.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 13701,
+     "pts_time": 0.891992,
+     "arr_seq": 27,
+     "err_ms": -8.008
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 1861,
+     "pts_time": 0.121159,
+     "arr_seq": 3,
+     "err_ms": 21.159
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 32285,
+     "pts_time": 2.101888,
+     "arr_seq": 51,
+     "err_ms": 1.888
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 10,
+   "T": 1.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 15297,
+     "pts_time": 0.995898,
+     "arr_seq": 30,
+     "err_ms": -4.102
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 3087,
+     "pts_time": 0.200977,
+     "arr_seq": 5,
+     "err_ms": 0.977
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 33603,
+     "pts_time": 2.187695,
+     "arr_seq": 53,
+     "err_ms": -12.305
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 11,
+   "T": 1.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 16730,
+     "pts_time": 1.089193,
+     "arr_seq": 33,
+     "err_ms": -10.807
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 4855,
+     "pts_time": 0.316081,
+     "arr_seq": 8,
+     "err_ms": 16.081
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 35551,
+     "pts_time": 2.314518,
+     "arr_seq": 56,
+     "err_ms": 14.518
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 12,
+   "T": 1.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 18228,
+     "pts_time": 1.186719,
+     "arr_seq": 36,
+     "err_ms": -13.281
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 6093,
+     "pts_time": 0.39668,
+     "arr_seq": 10,
+     "err_ms": -3.32
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 36651,
+     "pts_time": 2.386133,
+     "arr_seq": 58,
+     "err_ms": -13.867
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 13,
+   "T": 1.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 20220,
+     "pts_time": 1.316406,
+     "arr_seq": 40,
+     "err_ms": 16.406
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 7923,
+     "pts_time": 0.51582,
+     "arr_seq": 13,
+     "err_ms": 15.82
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 38418,
+     "pts_time": 2.501172,
+     "arr_seq": 61,
+     "err_ms": 1.172
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 14,
+   "T": 1.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 21353,
+     "pts_time": 1.390169,
+     "arr_seq": 42,
+     "err_ms": -9.831
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 9050,
+     "pts_time": 0.589193,
+     "arr_seq": 15,
+     "err_ms": -10.807
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 39721,
+     "pts_time": 2.586003,
+     "arr_seq": 63,
+     "err_ms": -13.997
+    },
+    "camD": {
+     "state": "NOT_STARTED",
+     "pts": null,
+     "pts_time": null,
+     "arr_seq": null,
+     "err_ms": null
+    }
+   }
+  },
+  {
+   "k": 15,
+   "T": 1.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 22764,
+     "pts_time": 1.482031,
+     "arr_seq": 45,
+     "err_ms": -17.969
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 10404,
+     "pts_time": 0.677344,
+     "arr_seq": 17,
+     "err_ms": -22.656
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 41775,
+     "pts_time": 2.719727,
+     "arr_seq": 66,
+     "err_ms": 19.727
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 0,
+     "pts_time": 0.0,
+     "arr_seq": 0,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 16,
+   "T": 1.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 24818,
+     "pts_time": 1.615755,
+     "arr_seq": 49,
+     "err_ms": 15.755
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 12303,
+     "pts_time": 0.800977,
+     "arr_seq": 20,
+     "err_ms": 0.977
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 42916,
+     "pts_time": 2.79401,
+     "arr_seq": 68,
+     "err_ms": -5.99
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 1536,
+     "pts_time": 0.1,
+     "arr_seq": 2,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 17,
+   "T": 1.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 26361,
+     "pts_time": 1.716211,
+     "arr_seq": 52,
+     "err_ms": 16.211
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 13559,
+     "pts_time": 0.882747,
+     "arr_seq": 22,
+     "err_ms": -17.253
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 44536,
+     "pts_time": 2.899479,
+     "arr_seq": 71,
+     "err_ms": -0.521
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 3072,
+     "pts_time": 0.2,
+     "arr_seq": 4,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 18,
+   "T": 1.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 27839,
+     "pts_time": 1.812435,
+     "arr_seq": 55,
+     "err_ms": 12.435
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 15407,
+     "pts_time": 1.00306,
+     "arr_seq": 25,
+     "err_ms": 3.06
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 45963,
+     "pts_time": 2.992383,
+     "arr_seq": 73,
+     "err_ms": -7.617
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 4608,
+     "pts_time": 0.3,
+     "arr_seq": 6,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 19,
+   "T": 1.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 29378,
+     "pts_time": 1.91263,
+     "arr_seq": 58,
+     "err_ms": 12.63
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 16714,
+     "pts_time": 1.088151,
+     "arr_seq": 27,
+     "err_ms": -11.849
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 47873,
+     "pts_time": 3.116732,
+     "arr_seq": 76,
+     "err_ms": 16.732
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 6144,
+     "pts_time": 0.4,
+     "arr_seq": 8,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 20,
+   "T": 2.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 30495,
+     "pts_time": 1.985352,
+     "arr_seq": 60,
+     "err_ms": -14.648
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 18653,
+     "pts_time": 1.214388,
+     "arr_seq": 30,
+     "err_ms": 14.388
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 49031,
+     "pts_time": 3.192122,
+     "arr_seq": 78,
+     "err_ms": -7.878
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 7680,
+     "pts_time": 0.5,
+     "arr_seq": 10,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 21,
+   "T": 2.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 32113,
+     "pts_time": 2.09069,
+     "arr_seq": 63,
+     "err_ms": -9.31
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 19855,
+     "pts_time": 1.292643,
+     "arr_seq": 32,
+     "err_ms": -7.357
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 50998,
+     "pts_time": 3.320182,
+     "arr_seq": 81,
+     "err_ms": 20.182
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 9216,
+     "pts_time": 0.6,
+     "arr_seq": 12,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 22,
+   "T": 2.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 33741,
+     "pts_time": 2.19668,
+     "arr_seq": 66,
+     "err_ms": -3.32
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 21737,
+     "pts_time": 1.415169,
+     "arr_seq": 35,
+     "err_ms": 15.169
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 52169,
+     "pts_time": 3.396419,
+     "arr_seq": 83,
+     "err_ms": -3.581
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 10752,
+     "pts_time": 0.7,
+     "arr_seq": 14,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 23,
+   "T": 2.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 35253,
+     "pts_time": 2.295117,
+     "arr_seq": 69,
+     "err_ms": -4.883
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 22877,
+     "pts_time": 1.489388,
+     "arr_seq": 37,
+     "err_ms": -10.612
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 54039,
+     "pts_time": 3.518164,
+     "arr_seq": 86,
+     "err_ms": 18.164
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 12288,
+     "pts_time": 0.8,
+     "arr_seq": 16,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 24,
+   "T": 2.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 36764,
+     "pts_time": 2.39349,
+     "arr_seq": 72,
+     "err_ms": -6.51
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 24690,
+     "pts_time": 1.607422,
+     "arr_seq": 40,
+     "err_ms": 7.422
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 55188,
+     "pts_time": 3.592969,
+     "arr_seq": 88,
+     "err_ms": -7.031
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 13824,
+     "pts_time": 0.9,
+     "arr_seq": 18,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 25,
+   "T": 2.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 38265,
+     "pts_time": 2.491211,
+     "arr_seq": 75,
+     "err_ms": -8.789
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 26396,
+     "pts_time": 1.71849,
+     "arr_seq": 43,
+     "err_ms": 18.49
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 56575,
+     "pts_time": 3.683268,
+     "arr_seq": 90,
+     "err_ms": -16.732
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 15360,
+     "pts_time": 1.0,
+     "arr_seq": 20,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 26,
+   "T": 2.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 39756,
+     "pts_time": 2.588281,
+     "arr_seq": 78,
+     "err_ms": -11.719
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 27470,
+     "pts_time": 1.788411,
+     "arr_seq": 45,
+     "err_ms": -11.589
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 58510,
+     "pts_time": 3.809245,
+     "arr_seq": 93,
+     "err_ms": 9.245
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 16896,
+     "pts_time": 1.1,
+     "arr_seq": 22,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 27,
+   "T": 2.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 41285,
+     "pts_time": 2.687826,
+     "arr_seq": 81,
+     "err_ms": -12.174
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 29226,
+     "pts_time": 1.902734,
+     "arr_seq": 48,
+     "err_ms": 2.734
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 59797,
+     "pts_time": 3.893034,
+     "arr_seq": 95,
+     "err_ms": -6.966
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 18432,
+     "pts_time": 1.2,
+     "arr_seq": 24,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 28,
+   "T": 2.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 43272,
+     "pts_time": 2.817188,
+     "arr_seq": 85,
+     "err_ms": 17.188
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 31046,
+     "pts_time": 2.021224,
+     "arr_seq": 51,
+     "err_ms": 21.224
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 61190,
+     "pts_time": 3.983724,
+     "arr_seq": 97,
+     "err_ms": -16.276
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 19968,
+     "pts_time": 1.3,
+     "arr_seq": 26,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 29,
+   "T": 2.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 44379,
+     "pts_time": 2.889258,
+     "arr_seq": 87,
+     "err_ms": -10.742
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 32192,
+     "pts_time": 2.095833,
+     "arr_seq": 53,
+     "err_ms": -4.167
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 63097,
+     "pts_time": 4.107878,
+     "arr_seq": 100,
+     "err_ms": 7.878
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 21504,
+     "pts_time": 1.4,
+     "arr_seq": 28,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 30,
+   "T": 3.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 46014,
+     "pts_time": 2.995703,
+     "arr_seq": 90,
+     "err_ms": -4.297
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 34070,
+     "pts_time": 2.218099,
+     "arr_seq": 56,
+     "err_ms": 18.099
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 64401,
+     "pts_time": 4.192773,
+     "arr_seq": 102,
+     "err_ms": -7.227
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 23040,
+     "pts_time": 1.5,
+     "arr_seq": 30,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 31,
+   "T": 3.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 47580,
+     "pts_time": 3.097656,
+     "arr_seq": 93,
+     "err_ms": -2.344
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 35237,
+     "pts_time": 2.294076,
+     "arr_seq": 58,
+     "err_ms": -5.924
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 65729,
+     "pts_time": 4.279232,
+     "arr_seq": 104,
+     "err_ms": -20.768
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 24576,
+     "pts_time": 1.6,
+     "arr_seq": 32,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 32,
+   "T": 3.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 48981,
+     "pts_time": 3.188867,
+     "arr_seq": 96,
+     "err_ms": -11.133
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 37017,
+     "pts_time": 2.409961,
+     "arr_seq": 61,
+     "err_ms": 9.961
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 65729,
+     "pts_time": 4.279232,
+     "arr_seq": 104,
+     "err_ms": -120.768
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 26112,
+     "pts_time": 1.7,
+     "arr_seq": 34,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 33,
+   "T": 3.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 50420,
+     "pts_time": 3.282552,
+     "arr_seq": 99,
+     "err_ms": -17.448
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 38657,
+     "pts_time": 2.516732,
+     "arr_seq": 64,
+     "err_ms": 16.732
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 65729,
+     "pts_time": 4.279232,
+     "arr_seq": 104,
+     "err_ms": -220.768
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 27648,
+     "pts_time": 1.8,
+     "arr_seq": 36,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 34,
+   "T": 3.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 52139,
+     "pts_time": 3.394466,
+     "arr_seq": 102,
+     "err_ms": -5.534
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 39923,
+     "pts_time": 2.599154,
+     "arr_seq": 66,
+     "err_ms": -0.846
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 65729,
+     "pts_time": 4.279232,
+     "arr_seq": 104,
+     "err_ms": -320.768
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 29184,
+     "pts_time": 1.9,
+     "arr_seq": 38,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 35,
+   "T": 3.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 53550,
+     "pts_time": 3.486328,
+     "arr_seq": 105,
+     "err_ms": -13.672
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 41252,
+     "pts_time": 2.685677,
+     "arr_seq": 68,
+     "err_ms": -14.323
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 65729,
+     "pts_time": 4.279232,
+     "arr_seq": 104,
+     "err_ms": -420.768
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 30720,
+     "pts_time": 2.0,
+     "arr_seq": 40,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 36,
+   "T": 3.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 55065,
+     "pts_time": 3.584961,
+     "arr_seq": 108,
+     "err_ms": -15.039
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 43036,
+     "pts_time": 2.801823,
+     "arr_seq": 71,
+     "err_ms": 1.823
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 65729,
+     "pts_time": 4.279232,
+     "arr_seq": 104,
+     "err_ms": -520.768
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 32256,
+     "pts_time": 2.1,
+     "arr_seq": 42,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 37,
+   "T": 3.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 56731,
+     "pts_time": 3.693424,
+     "arr_seq": 111,
+     "err_ms": -6.576
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 44700,
+     "pts_time": 2.910156,
+     "arr_seq": 74,
+     "err_ms": 10.156
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 65729,
+     "pts_time": 4.279232,
+     "arr_seq": 104,
+     "err_ms": -620.768
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 33792,
+     "pts_time": 2.2,
+     "arr_seq": 44,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 38,
+   "T": 3.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 58319,
+     "pts_time": 3.79681,
+     "arr_seq": 114,
+     "err_ms": -3.19
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 45936,
+     "pts_time": 2.990625,
+     "arr_seq": 76,
+     "err_ms": -9.375
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 65729,
+     "pts_time": 4.279232,
+     "arr_seq": 104,
+     "err_ms": -720.768
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 35328,
+     "pts_time": 2.3,
+     "arr_seq": 46,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 39,
+   "T": 3.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 59790,
+     "pts_time": 3.892578,
+     "arr_seq": 117,
+     "err_ms": -7.422
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 47849,
+     "pts_time": 3.115169,
+     "arr_seq": 79,
+     "err_ms": 15.169
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 89293,
+     "pts_time": 5.813346,
+     "arr_seq": 105,
+     "err_ms": 713.346
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 36864,
+     "pts_time": 2.4,
+     "arr_seq": 48,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 40,
+   "T": 4.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 61303,
+     "pts_time": 3.991081,
+     "arr_seq": 120,
+     "err_ms": -8.919
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 49071,
+     "pts_time": 3.194727,
+     "arr_seq": 81,
+     "err_ms": -5.273
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 89293,
+     "pts_time": 5.813346,
+     "arr_seq": 105,
+     "err_ms": 613.346
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 38400,
+     "pts_time": 2.5,
+     "arr_seq": 50,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 41,
+   "T": 4.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 62873,
+     "pts_time": 4.093294,
+     "arr_seq": 123,
+     "err_ms": -6.706
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 50993,
+     "pts_time": 3.319857,
+     "arr_seq": 84,
+     "err_ms": 19.857
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 89293,
+     "pts_time": 5.813346,
+     "arr_seq": 105,
+     "err_ms": 513.346
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 39936,
+     "pts_time": 2.6,
+     "arr_seq": 52,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 42,
+   "T": 4.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 64358,
+     "pts_time": 4.189974,
+     "arr_seq": 126,
+     "err_ms": -10.026
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 52259,
+     "pts_time": 3.402279,
+     "arr_seq": 86,
+     "err_ms": 2.279
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 89293,
+     "pts_time": 5.813346,
+     "arr_seq": 105,
+     "err_ms": 413.346
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 41472,
+     "pts_time": 2.7,
+     "arr_seq": 54,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 43,
+   "T": 4.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 65904,
+     "pts_time": 4.290625,
+     "arr_seq": 129,
+     "err_ms": -9.375
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 53543,
+     "pts_time": 3.485872,
+     "arr_seq": 88,
+     "err_ms": -14.128
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 89293,
+     "pts_time": 5.813346,
+     "arr_seq": 105,
+     "err_ms": 313.346
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 43008,
+     "pts_time": 2.8,
+     "arr_seq": 56,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 44,
+   "T": 4.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 67607,
+     "pts_time": 4.401497,
+     "arr_seq": 132,
+     "err_ms": 1.497
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 55558,
+     "pts_time": 3.617057,
+     "arr_seq": 91,
+     "err_ms": 17.057
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 89293,
+     "pts_time": 5.813346,
+     "arr_seq": 105,
+     "err_ms": 213.346
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 44544,
+     "pts_time": 2.9,
+     "arr_seq": 58,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 45,
+   "T": 4.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 69115,
+     "pts_time": 4.499674,
+     "arr_seq": 135,
+     "err_ms": -0.326
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 56871,
+     "pts_time": 3.702539,
+     "arr_seq": 93,
+     "err_ms": 2.539
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 89293,
+     "pts_time": 5.813346,
+     "arr_seq": 105,
+     "err_ms": 113.346
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 46080,
+     "pts_time": 3.0,
+     "arr_seq": 60,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 46,
+   "T": 4.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 70711,
+     "pts_time": 4.603581,
+     "arr_seq": 138,
+     "err_ms": 3.581
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 58603,
+     "pts_time": 3.815299,
+     "arr_seq": 96,
+     "err_ms": 15.299
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 89293,
+     "pts_time": 5.813346,
+     "arr_seq": 105,
+     "err_ms": 13.346
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 47616,
+     "pts_time": 3.1,
+     "arr_seq": 62,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 47,
+   "T": 4.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 72119,
+     "pts_time": 4.695247,
+     "arr_seq": 141,
+     "err_ms": -4.753
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 59758,
+     "pts_time": 3.890495,
+     "arr_seq": 98,
+     "err_ms": -9.505
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 90649,
+     "pts_time": 5.901628,
+     "arr_seq": 107,
+     "err_ms": 1.628
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 49152,
+     "pts_time": 3.2,
+     "arr_seq": 64,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 48,
+   "T": 4.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 73745,
+     "pts_time": 4.801107,
+     "arr_seq": 144,
+     "err_ms": 1.107
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 61625,
+     "pts_time": 4.012044,
+     "arr_seq": 101,
+     "err_ms": 12.044
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 92069,
+     "pts_time": 5.994076,
+     "arr_seq": 109,
+     "err_ms": -5.924
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 50688,
+     "pts_time": 3.3,
+     "arr_seq": 66,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 49,
+   "T": 4.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 75378,
+     "pts_time": 4.907422,
+     "arr_seq": 147,
+     "err_ms": 7.422
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 62857,
+     "pts_time": 4.092253,
+     "arr_seq": 103,
+     "err_ms": -7.747
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 93823,
+     "pts_time": 6.108268,
+     "arr_seq": 112,
+     "err_ms": 8.268
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 52224,
+     "pts_time": 3.4,
+     "arr_seq": 68,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 50,
+   "T": 5.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 76776,
+     "pts_time": 4.998437,
+     "arr_seq": 150,
+     "err_ms": -1.563
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 64467,
+     "pts_time": 4.19707,
+     "arr_seq": 106,
+     "err_ms": -2.93
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 95023,
+     "pts_time": 6.186393,
+     "arr_seq": 114,
+     "err_ms": -13.607
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 53760,
+     "pts_time": 3.5,
+     "arr_seq": 70,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 51,
+   "T": 5.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 78245,
+     "pts_time": 5.094076,
+     "arr_seq": 153,
+     "err_ms": -5.924
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 66276,
+     "pts_time": 4.314844,
+     "arr_seq": 109,
+     "err_ms": 14.844
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 96940,
+     "pts_time": 6.311198,
+     "arr_seq": 117,
+     "err_ms": 11.198
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 55296,
+     "pts_time": 3.6,
+     "arr_seq": 72,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 52,
+   "T": 5.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 79786,
+     "pts_time": 5.194401,
+     "arr_seq": 156,
+     "err_ms": -5.599
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 67451,
+     "pts_time": 4.391341,
+     "arr_seq": 111,
+     "err_ms": -8.659
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 98163,
+     "pts_time": 6.39082,
+     "arr_seq": 119,
+     "err_ms": -9.18
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 56832,
+     "pts_time": 3.7,
+     "arr_seq": 74,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 53,
+   "T": 5.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 81298,
+     "pts_time": 5.292839,
+     "arr_seq": 159,
+     "err_ms": -7.161
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 69317,
+     "pts_time": 4.512826,
+     "arr_seq": 114,
+     "err_ms": 12.826
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 100005,
+     "pts_time": 6.510742,
+     "arr_seq": 122,
+     "err_ms": 10.742
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 58368,
+     "pts_time": 3.8,
+     "arr_seq": 76,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 54,
+   "T": 5.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 82764,
+     "pts_time": 5.388281,
+     "arr_seq": 162,
+     "err_ms": -11.719
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 70537,
+     "pts_time": 4.592253,
+     "arr_seq": 116,
+     "err_ms": -7.747
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 101173,
+     "pts_time": 6.586784,
+     "arr_seq": 124,
+     "err_ms": -13.216
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 59904,
+     "pts_time": 3.9,
+     "arr_seq": 78,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 55,
+   "T": 5.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 84333,
+     "pts_time": 5.49043,
+     "arr_seq": 165,
+     "err_ms": -9.57
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 72418,
+     "pts_time": 4.714714,
+     "arr_seq": 119,
+     "err_ms": 14.714
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 102604,
+     "pts_time": 6.679948,
+     "arr_seq": 126,
+     "err_ms": -20.052
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 61440,
+     "pts_time": 4.0,
+     "arr_seq": 80,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 56,
+   "T": 5.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 86234,
+     "pts_time": 5.614193,
+     "arr_seq": 169,
+     "err_ms": 14.193
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 73727,
+     "pts_time": 4.799935,
+     "arr_seq": 121,
+     "err_ms": -0.065
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 104362,
+     "pts_time": 6.794401,
+     "arr_seq": 129,
+     "err_ms": -5.599
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 62976,
+     "pts_time": 4.1,
+     "arr_seq": 82,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 57,
+   "T": 5.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 87655,
+     "pts_time": 5.706706,
+     "arr_seq": 172,
+     "err_ms": 6.706
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 75066,
+     "pts_time": 4.887109,
+     "arr_seq": 123,
+     "err_ms": -12.891
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 106282,
+     "pts_time": 6.919401,
+     "arr_seq": 132,
+     "err_ms": 19.401
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 64512,
+     "pts_time": 4.2,
+     "arr_seq": 84,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 58,
+   "T": 5.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 88831,
+     "pts_time": 5.783268,
+     "arr_seq": 174,
+     "err_ms": -16.732
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 77028,
+     "pts_time": 5.014844,
+     "arr_seq": 126,
+     "err_ms": 14.844
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 107625,
+     "pts_time": 7.006836,
+     "arr_seq": 134,
+     "err_ms": 6.836
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 66048,
+     "pts_time": 4.3,
+     "arr_seq": 86,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 59,
+   "T": 5.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 90434,
+     "pts_time": 5.88763,
+     "arr_seq": 177,
+     "err_ms": -12.37
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 77739,
+     "pts_time": 5.061133,
+     "arr_seq": 127,
+     "err_ms": -38.867
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 108888,
+     "pts_time": 7.089062,
+     "arr_seq": 136,
+     "err_ms": -10.938
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 67584,
+     "pts_time": 4.4,
+     "arr_seq": 88,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 60,
+   "T": 6.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 91969,
+     "pts_time": 5.987565,
+     "arr_seq": 180,
+     "err_ms": -12.435
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 77739,
+     "pts_time": 5.061133,
+     "arr_seq": 127,
+     "err_ms": -138.867
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 110326,
+     "pts_time": 7.182682,
+     "arr_seq": 138,
+     "err_ms": -17.318
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 69120,
+     "pts_time": 4.5,
+     "arr_seq": 90,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 61,
+   "T": 6.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 93969,
+     "pts_time": 6.117773,
+     "arr_seq": 184,
+     "err_ms": 17.773
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 77739,
+     "pts_time": 5.061133,
+     "arr_seq": 127,
+     "err_ms": -238.867
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 112209,
+     "pts_time": 7.305273,
+     "arr_seq": 141,
+     "err_ms": 5.273
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 70656,
+     "pts_time": 4.6,
+     "arr_seq": 92,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 62,
+   "T": 6.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 95067,
+     "pts_time": 6.189258,
+     "arr_seq": 186,
+     "err_ms": -10.742
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 77739,
+     "pts_time": 5.061133,
+     "arr_seq": 127,
+     "err_ms": -338.867
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 113418,
+     "pts_time": 7.383984,
+     "arr_seq": 143,
+     "err_ms": -16.016
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 72192,
+     "pts_time": 4.7,
+     "arr_seq": 94,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 63,
+   "T": 6.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 96605,
+     "pts_time": 6.289388,
+     "arr_seq": 189,
+     "err_ms": -10.612
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 77739,
+     "pts_time": 5.061133,
+     "arr_seq": 127,
+     "err_ms": -438.867
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 115508,
+     "pts_time": 7.520052,
+     "arr_seq": 146,
+     "err_ms": 20.052
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 73728,
+     "pts_time": 4.8,
+     "arr_seq": 96,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 64,
+   "T": 6.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 98305,
+     "pts_time": 6.400065,
+     "arr_seq": 192,
+     "err_ms": 0.065
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 77739,
+     "pts_time": 5.061133,
+     "arr_seq": 127,
+     "err_ms": -538.867
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 116615,
+     "pts_time": 7.592122,
+     "arr_seq": 148,
+     "err_ms": -7.878
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 75264,
+     "pts_time": 4.9,
+     "arr_seq": 98,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 65,
+   "T": 6.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 99702,
+     "pts_time": 6.491016,
+     "arr_seq": 195,
+     "err_ms": -8.984
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 77739,
+     "pts_time": 5.061133,
+     "arr_seq": 127,
+     "err_ms": -638.867
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 118460,
+     "pts_time": 7.71224,
+     "arr_seq": 151,
+     "err_ms": 12.24
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 76800,
+     "pts_time": 5.0,
+     "arr_seq": 100,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 66,
+   "T": 6.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 101205,
+     "pts_time": 6.588867,
+     "arr_seq": 198,
+     "err_ms": -11.133
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 77739,
+     "pts_time": 5.061133,
+     "arr_seq": 127,
+     "err_ms": -738.867
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 119655,
+     "pts_time": 7.790039,
+     "arr_seq": 153,
+     "err_ms": -9.961
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 78336,
+     "pts_time": 5.1,
+     "arr_seq": 102,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 67,
+   "T": 6.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 103118,
+     "pts_time": 6.713411,
+     "arr_seq": 202,
+     "err_ms": 13.411
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 101735,
+     "pts_time": 6.623372,
+     "arr_seq": 128,
+     "err_ms": 723.372
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 121454,
+     "pts_time": 7.907161,
+     "arr_seq": 156,
+     "err_ms": 7.161
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 79872,
+     "pts_time": 5.2,
+     "arr_seq": 104,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 68,
+   "T": 6.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 104185,
+     "pts_time": 6.782878,
+     "arr_seq": 204,
+     "err_ms": -17.122
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 101735,
+     "pts_time": 6.623372,
+     "arr_seq": 128,
+     "err_ms": 623.372
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 122760,
+     "pts_time": 7.992188,
+     "arr_seq": 158,
+     "err_ms": -7.812
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 81408,
+     "pts_time": 5.3,
+     "arr_seq": 106,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 69,
+   "T": 6.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 105904,
+     "pts_time": 6.894792,
+     "arr_seq": 207,
+     "err_ms": -5.208
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 101735,
+     "pts_time": 6.623372,
+     "arr_seq": 128,
+     "err_ms": 523.372
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 124635,
+     "pts_time": 8.114258,
+     "arr_seq": 161,
+     "err_ms": 14.258
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 82944,
+     "pts_time": 5.4,
+     "arr_seq": 108,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 70,
+   "T": 7.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 107386,
+     "pts_time": 6.991276,
+     "arr_seq": 210,
+     "err_ms": -8.724
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 101735,
+     "pts_time": 6.623372,
+     "arr_seq": 128,
+     "err_ms": 423.372
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 125812,
+     "pts_time": 8.190885,
+     "arr_seq": 163,
+     "err_ms": -9.115
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 84480,
+     "pts_time": 5.5,
+     "arr_seq": 110,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 71,
+   "T": 7.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 108996,
+     "pts_time": 7.096094,
+     "arr_seq": 213,
+     "err_ms": -3.906
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 101735,
+     "pts_time": 6.623372,
+     "arr_seq": 128,
+     "err_ms": 323.372
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 127223,
+     "pts_time": 8.282747,
+     "arr_seq": 165,
+     "err_ms": -17.253
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 86016,
+     "pts_time": 5.6,
+     "arr_seq": 112,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 72,
+   "T": 7.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 110536,
+     "pts_time": 7.196354,
+     "arr_seq": 216,
+     "err_ms": -3.646
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 101735,
+     "pts_time": 6.623372,
+     "arr_seq": 128,
+     "err_ms": 223.372
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 129237,
+     "pts_time": 8.413867,
+     "arr_seq": 168,
+     "err_ms": 13.867
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 87552,
+     "pts_time": 5.7,
+     "arr_seq": 114,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 73,
+   "T": 7.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 112066,
+     "pts_time": 7.295964,
+     "arr_seq": 219,
+     "err_ms": -4.036
+    },
+    "camB": {
+     "state": "GAP",
+     "pts": 101735,
+     "pts_time": 6.623372,
+     "arr_seq": 128,
+     "err_ms": 123.372
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 130509,
+     "pts_time": 8.49668,
+     "arr_seq": 170,
+     "err_ms": -3.32
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 89088,
+     "pts_time": 5.8,
+     "arr_seq": 116,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 74,
+   "T": 7.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 113766,
+     "pts_time": 7.406641,
+     "arr_seq": 222,
+     "err_ms": 6.641
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 101735,
+     "pts_time": 6.623372,
+     "arr_seq": 128,
+     "err_ms": 23.372
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 132274,
+     "pts_time": 8.611589,
+     "arr_seq": 173,
+     "err_ms": 11.589
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 90624,
+     "pts_time": 5.9,
+     "arr_seq": 118,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 75,
+   "T": 7.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 115408,
+     "pts_time": 7.513542,
+     "arr_seq": 225,
+     "err_ms": 13.542
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 102955,
+     "pts_time": 6.702799,
+     "arr_seq": 130,
+     "err_ms": 2.799
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 133371,
+     "pts_time": 8.683008,
+     "arr_seq": 175,
+     "err_ms": -16.992
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 92160,
+     "pts_time": 6.0,
+     "arr_seq": 120,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 76,
+   "T": 7.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 117028,
+     "pts_time": 7.61901,
+     "arr_seq": 228,
+     "err_ms": 19.01
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 104350,
+     "pts_time": 6.79362,
+     "arr_seq": 132,
+     "err_ms": -6.38
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 135218,
+     "pts_time": 8.803255,
+     "arr_seq": 178,
+     "err_ms": 3.255
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 93696,
+     "pts_time": 6.1,
+     "arr_seq": 122,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 77,
+   "T": 7.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 118379,
+     "pts_time": 7.706966,
+     "arr_seq": 231,
+     "err_ms": 6.966
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 106096,
+     "pts_time": 6.907292,
+     "arr_seq": 135,
+     "err_ms": 7.292
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 136419,
+     "pts_time": 8.881445,
+     "arr_seq": 180,
+     "err_ms": -18.555
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 95232,
+     "pts_time": 6.2,
+     "arr_seq": 124,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 78,
+   "T": 7.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 120008,
+     "pts_time": 7.813021,
+     "arr_seq": 234,
+     "err_ms": 13.021
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 107233,
+     "pts_time": 6.981315,
+     "arr_seq": 137,
+     "err_ms": -18.685
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 138372,
+     "pts_time": 9.008594,
+     "arr_seq": 183,
+     "err_ms": 8.594
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 96768,
+     "pts_time": 6.3,
+     "arr_seq": 126,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 79,
+   "T": 7.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 121158,
+     "pts_time": 7.887891,
+     "arr_seq": 236,
+     "err_ms": -12.109
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 109281,
+     "pts_time": 7.114648,
+     "arr_seq": 140,
+     "err_ms": 14.648
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 139786,
+     "pts_time": 9.100651,
+     "arr_seq": 185,
+     "err_ms": 0.651
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 98304,
+     "pts_time": 6.4,
+     "arr_seq": 128,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 80,
+   "T": 8.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 122797,
+     "pts_time": 7.994596,
+     "arr_seq": 239,
+     "err_ms": -5.404
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 110625,
+     "pts_time": 7.202148,
+     "arr_seq": 142,
+     "err_ms": 2.148
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 141155,
+     "pts_time": 9.189779,
+     "arr_seq": 187,
+     "err_ms": -10.221
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 99840,
+     "pts_time": 6.5,
+     "arr_seq": 130,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 81,
+   "T": 8.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 124349,
+     "pts_time": 8.095638,
+     "arr_seq": 242,
+     "err_ms": -4.362
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 112439,
+     "pts_time": 7.320247,
+     "arr_seq": 145,
+     "err_ms": 20.247
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 142837,
+     "pts_time": 9.299284,
+     "arr_seq": 190,
+     "err_ms": -0.716
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 101376,
+     "pts_time": 6.6,
+     "arr_seq": 132,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 82,
+   "T": 8.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 125922,
+     "pts_time": 8.198047,
+     "arr_seq": 245,
+     "err_ms": -1.953
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 113792,
+     "pts_time": 7.408333,
+     "arr_seq": 147,
+     "err_ms": 8.333
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 144249,
+     "pts_time": 9.391211,
+     "arr_seq": 192,
+     "err_ms": -8.789
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 102912,
+     "pts_time": 6.7,
+     "arr_seq": 134,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 83,
+   "T": 8.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 127307,
+     "pts_time": 8.288216,
+     "arr_seq": 248,
+     "err_ms": -11.784
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 115026,
+     "pts_time": 7.488672,
+     "arr_seq": 149,
+     "err_ms": -11.328
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 146045,
+     "pts_time": 9.508138,
+     "arr_seq": 195,
+     "err_ms": 8.138
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 104448,
+     "pts_time": 6.8,
+     "arr_seq": 136,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 84,
+   "T": 8.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 129067,
+     "pts_time": 8.402799,
+     "arr_seq": 251,
+     "err_ms": 2.799
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 116876,
+     "pts_time": 7.609115,
+     "arr_seq": 152,
+     "err_ms": 9.115
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 147735,
+     "pts_time": 9.618164,
+     "arr_seq": 198,
+     "err_ms": 18.164
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 105984,
+     "pts_time": 6.9,
+     "arr_seq": 138,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 85,
+   "T": 8.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 130710,
+     "pts_time": 8.509766,
+     "arr_seq": 254,
+     "err_ms": 9.766
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 118104,
+     "pts_time": 7.689063,
+     "arr_seq": 154,
+     "err_ms": -10.937
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 148921,
+     "pts_time": 9.695378,
+     "arr_seq": 200,
+     "err_ms": -4.622
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 107520,
+     "pts_time": 7.0,
+     "arr_seq": 140,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 86,
+   "T": 8.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 132144,
+     "pts_time": 8.603125,
+     "arr_seq": 257,
+     "err_ms": 3.125
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 119849,
+     "pts_time": 7.802669,
+     "arr_seq": 157,
+     "err_ms": 2.669
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 150289,
+     "pts_time": 9.78444,
+     "arr_seq": 202,
+     "err_ms": -15.56
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 109056,
+     "pts_time": 7.1,
+     "arr_seq": 142,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 87,
+   "T": 8.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 133774,
+     "pts_time": 8.709245,
+     "arr_seq": 260,
+     "err_ms": 9.245
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 121184,
+     "pts_time": 7.889583,
+     "arr_seq": 159,
+     "err_ms": -10.417
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 152111,
+     "pts_time": 9.90306,
+     "arr_seq": 205,
+     "err_ms": 3.06
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 110592,
+     "pts_time": 7.2,
+     "arr_seq": 144,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 88,
+   "T": 8.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 134945,
+     "pts_time": 8.785482,
+     "arr_seq": 262,
+     "err_ms": -14.518
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 122995,
+     "pts_time": 8.007487,
+     "arr_seq": 162,
+     "err_ms": 7.487
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 153414,
+     "pts_time": 9.987891,
+     "arr_seq": 207,
+     "err_ms": -12.109
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 112128,
+     "pts_time": 7.3,
+     "arr_seq": 146,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 89,
+   "T": 8.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 136574,
+     "pts_time": 8.891536,
+     "arr_seq": 265,
+     "err_ms": -8.464
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 124189,
+     "pts_time": 8.085221,
+     "arr_seq": 164,
+     "err_ms": -14.779
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 155278,
+     "pts_time": 10.109245,
+     "arr_seq": 210,
+     "err_ms": 9.245
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 113664,
+     "pts_time": 7.4,
+     "arr_seq": 148,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 90,
+   "T": 9.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 138255,
+     "pts_time": 9.000977,
+     "arr_seq": 268,
+     "err_ms": 0.977
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 126047,
+     "pts_time": 8.206185,
+     "arr_seq": 167,
+     "err_ms": 6.185
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 156639,
+     "pts_time": 10.197852,
+     "arr_seq": 212,
+     "err_ms": -2.148
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 115200,
+     "pts_time": 7.5,
+     "arr_seq": 150,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 91,
+   "T": 9.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 139951,
+     "pts_time": 9.111393,
+     "arr_seq": 271,
+     "err_ms": 11.393
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 127320,
+     "pts_time": 8.289062,
+     "arr_seq": 169,
+     "err_ms": -10.937
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 157971,
+     "pts_time": 10.28457,
+     "arr_seq": 214,
+     "err_ms": -15.43
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 116736,
+     "pts_time": 7.6,
+     "arr_seq": 152,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 92,
+   "T": 9.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 141496,
+     "pts_time": 9.211979,
+     "arr_seq": 274,
+     "err_ms": 11.979
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 128989,
+     "pts_time": 8.397721,
+     "arr_seq": 172,
+     "err_ms": -2.279
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 159291,
+     "pts_time": 10.370508,
+     "arr_seq": 216,
+     "err_ms": -29.492
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 118272,
+     "pts_time": 7.7,
+     "arr_seq": 154,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 93,
+   "T": 9.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 142963,
+     "pts_time": 9.307487,
+     "arr_seq": 277,
+     "err_ms": 7.487
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 130563,
+     "pts_time": 8.500195,
+     "arr_seq": 175,
+     "err_ms": 0.195
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 159291,
+     "pts_time": 10.370508,
+     "arr_seq": 216,
+     "err_ms": -129.492
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 119808,
+     "pts_time": 7.8,
+     "arr_seq": 156,
+     "err_ms": -0.0
+    }
+   }
+  },
+  {
+   "k": 94,
+   "T": 9.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 144449,
+     "pts_time": 9.404232,
+     "arr_seq": 280,
+     "err_ms": 4.232
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 131820,
+     "pts_time": 8.582031,
+     "arr_seq": 177,
+     "err_ms": -17.969
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 159291,
+     "pts_time": 10.370508,
+     "arr_seq": 216,
+     "err_ms": -229.492
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 121344,
+     "pts_time": 7.9,
+     "arr_seq": 158,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 95,
+   "T": 9.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 146024,
+     "pts_time": 9.506771,
+     "arr_seq": 283,
+     "err_ms": 6.771
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 133757,
+     "pts_time": 8.708138,
+     "arr_seq": 180,
+     "err_ms": 8.138
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 159291,
+     "pts_time": 10.370508,
+     "arr_seq": 216,
+     "err_ms": -329.492
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 122880,
+     "pts_time": 8.0,
+     "arr_seq": 160,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 96,
+   "T": 9.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 147645,
+     "pts_time": 9.612305,
+     "arr_seq": 286,
+     "err_ms": 12.305
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 135444,
+     "pts_time": 8.817969,
+     "arr_seq": 183,
+     "err_ms": 17.969
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 159291,
+     "pts_time": 10.370508,
+     "arr_seq": 216,
+     "err_ms": -429.492
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 124416,
+     "pts_time": 8.1,
+     "arr_seq": 162,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 97,
+   "T": 9.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 148743,
+     "pts_time": 9.683789,
+     "arr_seq": 288,
+     "err_ms": -16.211
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 136768,
+     "pts_time": 8.904167,
+     "arr_seq": 185,
+     "err_ms": 4.167
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 159291,
+     "pts_time": 10.370508,
+     "arr_seq": 216,
+     "err_ms": -529.492
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 125952,
+     "pts_time": 8.2,
+     "arr_seq": 164,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 98,
+   "T": 9.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 150268,
+     "pts_time": 9.783073,
+     "arr_seq": 291,
+     "err_ms": -16.927
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 138038,
+     "pts_time": 8.986849,
+     "arr_seq": 187,
+     "err_ms": -13.151
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 159291,
+     "pts_time": 10.370508,
+     "arr_seq": 216,
+     "err_ms": -629.492
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 127488,
+     "pts_time": 8.3,
+     "arr_seq": 166,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 99,
+   "T": 9.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 151840,
+     "pts_time": 9.885417,
+     "arr_seq": 294,
+     "err_ms": -14.583
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 139931,
+     "pts_time": 9.110091,
+     "arr_seq": 190,
+     "err_ms": 10.091
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 181360,
+     "pts_time": 11.807292,
+     "arr_seq": 217,
+     "err_ms": 707.292
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 129024,
+     "pts_time": 8.4,
+     "arr_seq": 168,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 100,
+   "T": 10.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 153849,
+     "pts_time": 10.016211,
+     "arr_seq": 298,
+     "err_ms": 16.211
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 141105,
+     "pts_time": 9.186523,
+     "arr_seq": 192,
+     "err_ms": -13.477
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 181360,
+     "pts_time": 11.807292,
+     "arr_seq": 217,
+     "err_ms": 607.292
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 130560,
+     "pts_time": 8.5,
+     "arr_seq": 170,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 101,
+   "T": 10.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 154915,
+     "pts_time": 10.085612,
+     "arr_seq": 300,
+     "err_ms": -14.388
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 142983,
+     "pts_time": 9.308789,
+     "arr_seq": 195,
+     "err_ms": 8.789
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 181360,
+     "pts_time": 11.807292,
+     "arr_seq": 217,
+     "err_ms": 507.292
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 132096,
+     "pts_time": 8.6,
+     "arr_seq": 172,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 102,
+   "T": 10.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 156509,
+     "pts_time": 10.189388,
+     "arr_seq": 303,
+     "err_ms": -10.612
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 144083,
+     "pts_time": 9.380404,
+     "arr_seq": 197,
+     "err_ms": -19.596
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 181360,
+     "pts_time": 11.807292,
+     "arr_seq": 217,
+     "err_ms": 407.292
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 133632,
+     "pts_time": 8.7,
+     "arr_seq": 174,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 103,
+   "T": 10.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 158462,
+     "pts_time": 10.316536,
+     "arr_seq": 307,
+     "err_ms": 16.536
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 146085,
+     "pts_time": 9.510742,
+     "arr_seq": 200,
+     "err_ms": 10.742
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 181360,
+     "pts_time": 11.807292,
+     "arr_seq": 217,
+     "err_ms": 307.292
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 135168,
+     "pts_time": 8.8,
+     "arr_seq": 176,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 104,
+   "T": 10.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 159465,
+     "pts_time": 10.381836,
+     "arr_seq": 309,
+     "err_ms": -18.164
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 147239,
+     "pts_time": 9.585872,
+     "arr_seq": 202,
+     "err_ms": -14.128
+    },
+    "camC": {
+     "state": "GAP",
+     "pts": 181360,
+     "pts_time": 11.807292,
+     "arr_seq": 217,
+     "err_ms": 207.292
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 136704,
+     "pts_time": 8.9,
+     "arr_seq": 178,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 105,
+   "T": 10.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 161077,
+     "pts_time": 10.486784,
+     "arr_seq": 312,
+     "err_ms": -13.216
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 148948,
+     "pts_time": 9.697135,
+     "arr_seq": 205,
+     "err_ms": -2.865
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 181360,
+     "pts_time": 11.807292,
+     "arr_seq": 217,
+     "err_ms": 107.292
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 138240,
+     "pts_time": 9.0,
+     "arr_seq": 180,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 106,
+   "T": 10.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 162669,
+     "pts_time": 10.59043,
+     "arr_seq": 315,
+     "err_ms": -9.57
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 150300,
+     "pts_time": 9.785156,
+     "arr_seq": 207,
+     "err_ms": -14.844
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 181360,
+     "pts_time": 11.807292,
+     "arr_seq": 217,
+     "err_ms": 7.292
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 139776,
+     "pts_time": 9.1,
+     "arr_seq": 182,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 107,
+   "T": 10.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 164228,
+     "pts_time": 10.691927,
+     "arr_seq": 318,
+     "err_ms": -8.073
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 152196,
+     "pts_time": 9.908594,
+     "arr_seq": 210,
+     "err_ms": 8.594
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 182711,
+     "pts_time": 11.895247,
+     "arr_seq": 219,
+     "err_ms": -4.753
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 141312,
+     "pts_time": 9.2,
+     "arr_seq": 184,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 108,
+   "T": 10.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 165693,
+     "pts_time": 10.787305,
+     "arr_seq": 321,
+     "err_ms": -12.695
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 153391,
+     "pts_time": 9.986393,
+     "arr_seq": 212,
+     "err_ms": -13.607
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 184075,
+     "pts_time": 11.984049,
+     "arr_seq": 221,
+     "err_ms": -15.951
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 142848,
+     "pts_time": 9.3,
+     "arr_seq": 186,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 109,
+   "T": 10.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 167262,
+     "pts_time": 10.889453,
+     "arr_seq": 324,
+     "err_ms": -10.547
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 155340,
+     "pts_time": 10.113281,
+     "arr_seq": 215,
+     "err_ms": 13.281
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 185912,
+     "pts_time": 12.103646,
+     "arr_seq": 224,
+     "err_ms": 3.646
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 144384,
+     "pts_time": 9.4,
+     "arr_seq": 188,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 110,
+   "T": 11.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 168790,
+     "pts_time": 10.988932,
+     "arr_seq": 327,
+     "err_ms": -11.068
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 156711,
+     "pts_time": 10.202539,
+     "arr_seq": 217,
+     "err_ms": 2.539
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 187240,
+     "pts_time": 12.190104,
+     "arr_seq": 226,
+     "err_ms": -9.896
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 145920,
+     "pts_time": 9.5,
+     "arr_seq": 190,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 111,
+   "T": 11.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 170266,
+     "pts_time": 11.085026,
+     "arr_seq": 330,
+     "err_ms": -14.974
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 158064,
+     "pts_time": 10.290625,
+     "arr_seq": 219,
+     "err_ms": -9.375
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 189213,
+     "pts_time": 12.318555,
+     "arr_seq": 229,
+     "err_ms": 18.555
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 147456,
+     "pts_time": 9.6,
+     "arr_seq": 192,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 112,
+   "T": 11.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 171814,
+     "pts_time": 11.185807,
+     "arr_seq": 333,
+     "err_ms": -14.193
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 159455,
+     "pts_time": 10.381185,
+     "arr_seq": 221,
+     "err_ms": -18.815
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 190495,
+     "pts_time": 12.402018,
+     "arr_seq": 231,
+     "err_ms": 2.018
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 148992,
+     "pts_time": 9.7,
+     "arr_seq": 194,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 113,
+   "T": 11.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 173454,
+     "pts_time": 11.292578,
+     "arr_seq": 336,
+     "err_ms": -7.422
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 161164,
+     "pts_time": 10.492448,
+     "arr_seq": 224,
+     "err_ms": -7.552
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 191857,
+     "pts_time": 12.49069,
+     "arr_seq": 233,
+     "err_ms": -9.31
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 150528,
+     "pts_time": 9.8,
+     "arr_seq": 196,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 114,
+   "T": 11.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 174997,
+     "pts_time": 11.393034,
+     "arr_seq": 339,
+     "err_ms": -6.966
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 162998,
+     "pts_time": 10.611849,
+     "arr_seq": 227,
+     "err_ms": 11.849
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 193317,
+     "pts_time": 12.585742,
+     "arr_seq": 235,
+     "err_ms": -14.258
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 152064,
+     "pts_time": 9.9,
+     "arr_seq": 198,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 115,
+   "T": 11.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 176703,
+     "pts_time": 11.504102,
+     "arr_seq": 342,
+     "err_ms": 4.102
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 164134,
+     "pts_time": 10.685807,
+     "arr_seq": 229,
+     "err_ms": -14.193
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 195263,
+     "pts_time": 12.712435,
+     "arr_seq": 238,
+     "err_ms": 12.435
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 153600,
+     "pts_time": 10.0,
+     "arr_seq": 200,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 116,
+   "T": 11.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 178248,
+     "pts_time": 11.604688,
+     "arr_seq": 345,
+     "err_ms": 4.688
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 165885,
+     "pts_time": 10.799805,
+     "arr_seq": 232,
+     "err_ms": -0.195
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 196453,
+     "pts_time": 12.789909,
+     "arr_seq": 240,
+     "err_ms": -10.091
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 155136,
+     "pts_time": 10.1,
+     "arr_seq": 202,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 117,
+   "T": 11.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 179788,
+     "pts_time": 11.704948,
+     "arr_seq": 348,
+     "err_ms": 4.948
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 167577,
+     "pts_time": 10.909961,
+     "arr_seq": 235,
+     "err_ms": 9.961
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 198180,
+     "pts_time": 12.902344,
+     "arr_seq": 243,
+     "err_ms": 2.344
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 156672,
+     "pts_time": 10.2,
+     "arr_seq": 204,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 118,
+   "T": 11.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 181531,
+     "pts_time": 11.818424,
+     "arr_seq": 351,
+     "err_ms": 18.424
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 168898,
+     "pts_time": 10.995964,
+     "arr_seq": 237,
+     "err_ms": -4.036
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 199895,
+     "pts_time": 13.013997,
+     "arr_seq": 246,
+     "err_ms": 13.997
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 158208,
+     "pts_time": 10.3,
+     "arr_seq": 206,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 119,
+   "T": 11.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 182968,
+     "pts_time": 11.911979,
+     "arr_seq": 354,
+     "err_ms": 11.979
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 170657,
+     "pts_time": 11.110482,
+     "arr_seq": 240,
+     "err_ms": 10.482
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 201106,
+     "pts_time": 13.092839,
+     "arr_seq": 248,
+     "err_ms": -7.161
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 159744,
+     "pts_time": 10.4,
+     "arr_seq": 208,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 120,
+   "T": 12.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 184543,
+     "pts_time": 12.014518,
+     "arr_seq": 357,
+     "err_ms": 14.518
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 171818,
+     "pts_time": 11.186068,
+     "arr_seq": 242,
+     "err_ms": -13.932
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 202379,
+     "pts_time": 13.175716,
+     "arr_seq": 250,
+     "err_ms": -24.284
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 161280,
+     "pts_time": 10.5,
+     "arr_seq": 210,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 121,
+   "T": 12.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 186102,
+     "pts_time": 12.116016,
+     "arr_seq": 360,
+     "err_ms": 16.016
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 173391,
+     "pts_time": 11.288477,
+     "arr_seq": 245,
+     "err_ms": -11.523
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 204454,
+     "pts_time": 13.310807,
+     "arr_seq": 253,
+     "err_ms": 10.807
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 162816,
+     "pts_time": 10.6,
+     "arr_seq": 212,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 122,
+   "T": 12.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 187656,
+     "pts_time": 12.217187,
+     "arr_seq": 363,
+     "err_ms": 17.188
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 174777,
+     "pts_time": 11.378711,
+     "arr_seq": 247,
+     "err_ms": -21.289
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 205762,
+     "pts_time": 13.395964,
+     "arr_seq": 255,
+     "err_ms": -4.036
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 164352,
+     "pts_time": 10.7,
+     "arr_seq": 214,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 123,
+   "T": 12.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 188699,
+     "pts_time": 12.285091,
+     "arr_seq": 365,
+     "err_ms": -14.909
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 176799,
+     "pts_time": 11.510352,
+     "arr_seq": 250,
+     "err_ms": 10.352
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 207064,
+     "pts_time": 13.480729,
+     "arr_seq": 257,
+     "err_ms": -19.271
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 165888,
+     "pts_time": 10.8,
+     "arr_seq": 216,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 124,
+   "T": 12.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 190295,
+     "pts_time": 12.388997,
+     "arr_seq": 368,
+     "err_ms": -11.003
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 177988,
+     "pts_time": 11.58776,
+     "arr_seq": 252,
+     "err_ms": -12.24
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 209121,
+     "pts_time": 13.614648,
+     "arr_seq": 260,
+     "err_ms": 14.648
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 167424,
+     "pts_time": 10.9,
+     "arr_seq": 218,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 125,
+   "T": 12.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 191737,
+     "pts_time": 12.482878,
+     "arr_seq": 371,
+     "err_ms": -17.122
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 179783,
+     "pts_time": 11.704622,
+     "arr_seq": 255,
+     "err_ms": 4.622
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 210398,
+     "pts_time": 13.697786,
+     "arr_seq": 262,
+     "err_ms": -2.214
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 168960,
+     "pts_time": 11.0,
+     "arr_seq": 220,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 126,
+   "T": 12.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 193403,
+     "pts_time": 12.591341,
+     "arr_seq": 374,
+     "err_ms": -8.659
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 181557,
+     "pts_time": 11.820117,
+     "arr_seq": 258,
+     "err_ms": 20.117
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 211754,
+     "pts_time": 13.786068,
+     "arr_seq": 264,
+     "err_ms": -13.932
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 170496,
+     "pts_time": 11.1,
+     "arr_seq": 222,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 127,
+   "T": 12.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 195193,
+     "pts_time": 12.707878,
+     "arr_seq": 377,
+     "err_ms": 7.878
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 182705,
+     "pts_time": 11.894857,
+     "arr_seq": 260,
+     "err_ms": -5.143
+    },
+    "camC": {
+     "state": "OK",
+     "pts": 213636,
+     "pts_time": 13.908594,
+     "arr_seq": 267,
+     "err_ms": 8.594
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 172032,
+     "pts_time": 11.2,
+     "arr_seq": 224,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 128,
+   "T": 12.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 196873,
+     "pts_time": 12.817253,
+     "arr_seq": 380,
+     "err_ms": 17.253
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 184532,
+     "pts_time": 12.013802,
+     "arr_seq": 263,
+     "err_ms": 13.802
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -51.237
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 173568,
+     "pts_time": 11.3,
+     "arr_seq": 226,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 129,
+   "T": 12.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 198366,
+     "pts_time": 12.914453,
+     "arr_seq": 383,
+     "err_ms": 14.453
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 185724,
+     "pts_time": 12.091406,
+     "arr_seq": 265,
+     "err_ms": -8.594
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -151.237
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 175104,
+     "pts_time": 11.4,
+     "arr_seq": 228,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 130,
+   "T": 13.0,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 199760,
+     "pts_time": 13.005208,
+     "arr_seq": 386,
+     "err_ms": 5.208
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 187612,
+     "pts_time": 12.214323,
+     "arr_seq": 268,
+     "err_ms": 14.323
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -251.237
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 176640,
+     "pts_time": 11.5,
+     "arr_seq": 230,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 131,
+   "T": 13.1,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 201241,
+     "pts_time": 13.101628,
+     "arr_seq": 389,
+     "err_ms": 1.628
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 188777,
+     "pts_time": 12.290169,
+     "arr_seq": 270,
+     "err_ms": -9.831
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -351.237
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 178176,
+     "pts_time": 11.6,
+     "arr_seq": 232,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 132,
+   "T": 13.2,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 202659,
+     "pts_time": 13.193945,
+     "arr_seq": 392,
+     "err_ms": -6.055
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 190459,
+     "pts_time": 12.399674,
+     "arr_seq": 273,
+     "err_ms": -0.326
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -451.237
+    },
+    "camD": {
+     "state": "OK",
+     "pts": 179712,
+     "pts_time": 11.7,
+     "arr_seq": 234,
+     "err_ms": 0.0
+    }
+   }
+  },
+  {
+   "k": 133,
+   "T": 13.3,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 204102,
+     "pts_time": 13.287891,
+     "arr_seq": 395,
+     "err_ms": -12.109
+    },
+    "camB": {
+     "state": "OK",
+     "pts": 191662,
+     "pts_time": 12.477995,
+     "arr_seq": 275,
+     "err_ms": -22.005
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -551.237
+    },
+    "camD": {
+     "state": "ENDED",
+     "pts": 180134,
+     "pts_time": 11.727474,
+     "arr_seq": 235,
+     "err_ms": -72.526
+    }
+   }
+  },
+  {
+   "k": 134,
+   "T": 13.4,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 205693,
+     "pts_time": 13.391471,
+     "arr_seq": 398,
+     "err_ms": -8.529
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 191662,
+     "pts_time": 12.477995,
+     "arr_seq": 275,
+     "err_ms": -122.005
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -651.237
+    },
+    "camD": {
+     "state": "ENDED",
+     "pts": 180134,
+     "pts_time": 11.727474,
+     "arr_seq": 235,
+     "err_ms": -172.526
+    }
+   }
+  },
+  {
+   "k": 135,
+   "T": 13.5,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 207206,
+     "pts_time": 13.489974,
+     "arr_seq": 401,
+     "err_ms": -10.026
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 191662,
+     "pts_time": 12.477995,
+     "arr_seq": 275,
+     "err_ms": -222.005
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -751.237
+    },
+    "camD": {
+     "state": "ENDED",
+     "pts": 180134,
+     "pts_time": 11.727474,
+     "arr_seq": 235,
+     "err_ms": -272.526
+    }
+   }
+  },
+  {
+   "k": 136,
+   "T": 13.6,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 208759,
+     "pts_time": 13.591081,
+     "arr_seq": 404,
+     "err_ms": -8.919
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 191662,
+     "pts_time": 12.477995,
+     "arr_seq": 275,
+     "err_ms": -322.005
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -851.237
+    },
+    "camD": {
+     "state": "ENDED",
+     "pts": 180134,
+     "pts_time": 11.727474,
+     "arr_seq": 235,
+     "err_ms": -372.526
+    }
+   }
+  },
+  {
+   "k": 137,
+   "T": 13.7,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 210657,
+     "pts_time": 13.714648,
+     "arr_seq": 408,
+     "err_ms": 14.648
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 191662,
+     "pts_time": 12.477995,
+     "arr_seq": 275,
+     "err_ms": -422.005
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -951.237
+    },
+    "camD": {
+     "state": "ENDED",
+     "pts": 180134,
+     "pts_time": 11.727474,
+     "arr_seq": 235,
+     "err_ms": -472.526
+    }
+   }
+  },
+  {
+   "k": 138,
+   "T": 13.8,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 211715,
+     "pts_time": 13.783529,
+     "arr_seq": 410,
+     "err_ms": -16.471
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 191662,
+     "pts_time": 12.477995,
+     "arr_seq": 275,
+     "err_ms": -522.005
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -1051.237
+    },
+    "camD": {
+     "state": "ENDED",
+     "pts": 180134,
+     "pts_time": 11.727474,
+     "arr_seq": 235,
+     "err_ms": -572.526
+    }
+   }
+  },
+  {
+   "k": 139,
+   "T": 13.9,
+   "streams": {
+    "camA": {
+     "state": "OK",
+     "pts": 213595,
+     "pts_time": 13.905924,
+     "arr_seq": 414,
+     "err_ms": 5.924
+    },
+    "camB": {
+     "state": "ENDED",
+     "pts": 191662,
+     "pts_time": 12.477995,
+     "arr_seq": 275,
+     "err_ms": -622.005
+    },
+    "camC": {
+     "state": "ENDED",
+     "pts": 214253,
+     "pts_time": 13.948763,
+     "arr_seq": 268,
+     "err_ms": -1151.237
+    },
+    "camD": {
+     "state": "ENDED",
+     "pts": 180134,
+     "pts_time": 11.727474,
+     "arr_seq": 235,
+     "err_ms": -672.526
+    }
+   }
+  }
+ ],
+ "metrics": {
+  "camA": {
+   "picks": 140,
+   "stalls": 0,
+   "held": 0,
+   "ended_ticks": 0,
+   "not_started_ticks": 0,
+   "errors": 0,
+   "gaps": 0,
+   "mean_err_ms": 9.759579613095298,
+   "max_err_ms": 19.01041666666714
+  },
+  "camB": {
+   "picks": 126,
+   "stalls": 0,
+   "held": 0,
+   "ended_ticks": 6,
+   "not_started_ticks": 8,
+   "errors": 0,
+   "gaps": 14,
+   "mean_err_ms": 57.52418154761893,
+   "max_err_ms": 738.8671874999994
+  },
+  "camC": {
+   "picks": 128,
+   "stalls": 0,
+   "held": 0,
+   "ended_ticks": 12,
+   "not_started_ticks": 0,
+   "errors": 0,
+   "gaps": 25,
+   "mean_err_ms": 94.09434000651042,
+   "max_err_ms": 720.7682291666666
+  },
+  "camD": {
+   "picks": 118,
+   "stalls": 0,
+   "held": 0,
+   "ended_ticks": 7,
+   "not_started_ticks": 15,
+   "errors": 0,
+   "gaps": 0,
+   "mean_err_ms": 8.350194358939207e-14,
+   "max_err_ms": 8.881784197001252e-13
+  }
+ }
+}
